@@ -24,14 +24,14 @@ const HeaderNavbar = () => {
   };
 
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  const darkThemeSheet = "bg-zinc-950 border-zinc-800"
-  const darkThemeSheetButtonMobile = "bg-zinc-950 border-zinc-800 hover:bg-zinc-900"
-  const darkThemeSheetButtonDesktop = "dark:border dark:border-zinc-800 dark:hover:bg-neutral-900"
+  const darkThemeSheet = "bg-sky-700 border-sky-800"
+  const darkThemeSheetButtonMobile = "border-0 dark:border dark:border-0 dark:hover:bg-sky-800/50 bg-sky-600 dark:text-white/90"
+  const darkThemeSheetButtonDesktop = "dark:border dark:border-0 dark:hover:bg-sky-800/50 dark:bg-sky-600 dark:text-white/90"
 
   return (
     <div
       id="hero"
-      className="fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-white drop-shadow-md max-h-[76px] z-20 dark:bg-zinc-950 dark:text-white/90"
+      className="dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-sky-700 drop-shadow-md max-h-[76px] z-20"
     >
       {/* Left Side */}
       <Button
@@ -41,7 +41,7 @@ const HeaderNavbar = () => {
         onClick={() => scrollToSection("hero")}
       >
         <div className="sacramento-navbar-left lg:text-[40px] mb-[-3px] lg:mb-0">
-          <Image src="/headerLogo.webp" alt="headerlogo" width={100} height={100} className="" />
+          <Image src="/logo_elhammansiz.png" alt="headerlogo" width={100} height={100} className="invertt" />
         </div>
       </Button>
 
@@ -108,7 +108,7 @@ const HeaderNavbar = () => {
       {/* Right Side - Mobile */}
       <div className="lg:hidden">
         <Sheet>
-          <SheetTrigger className="text-3xl self-center mt-[-7px]">
+          <SheetTrigger className="text-3xl self-center mt-[-7px] text-white">
             ☰
           </SheetTrigger>
           <SheetContent className={`${isDarkTheme && `${darkThemeSheet} dark`}`}>
@@ -122,7 +122,7 @@ const HeaderNavbar = () => {
                     onClick={() => scrollToSection("hero")}
                   >
                     <div className="sacramento-navbar-left lg:text-[40px] mb-[-3px] lg:mb-0">
-                      <Image src="/headerLogo.webp" alt="headerlogo" width={100} height={100} className="" />
+                      <Image src="/logo_elhammansiz.png" alt="headerlogo" width={100} height={100} className="invertt" />
                     </div>
                   </Button>
                 </SheetClose>
