@@ -11,27 +11,20 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { scrollToSection } from "@/functions/scrollToSection";
+import { colorpallete } from "./ColorPallete";
 
 const HeaderNavbar = () => {
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  const darkThemeSheet = "bg-sky-700 border-sky-800"
-  const darkThemeSheetButtonMobile = "border-0 dark:border dark:border-0 dark:hover:bg-sky-800/50 bg-sky-600 dark:text-white/90"
-  const darkThemeSheetButtonDesktop = "dark:border dark:border-0 dark:hover:bg-sky-800/50 dark:bg-sky-600 dark:text-white/90"
+  // const darkThemeSheet = "border-black/10"
+  const darkThemeSheetButtonMobile = "border-0 dark:border dark:border-0 dark:hover:bg-white/10 bg-[${colorpallete.primary}] dark:text-white/90"
+  const darkThemeSheetButtonDesktop = "dark:border dark:border-0 dark:bg-black/10 dark:hover:bg-black/20 dark:text-white/90"
 
   return (
     <div
       id="hero"
-      className="dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-gradient-to-t from-sky-700 to-sky-900 drop-shadow-md max-h-[76px] z-[40]"
+      className={`dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-gradient-to-t from-[${colorpallete.third}] to-[${colorpallete.primary}] drop-shadow-md max-h-[76px] z-[40]`}
     >
       {/* Left Side */}
       <Button
@@ -111,7 +104,7 @@ const HeaderNavbar = () => {
           <SheetTrigger className="text-3xl self-center mt-[-7px] text-white">
             ☰
           </SheetTrigger>
-          <SheetContent className={`${isDarkTheme && `${darkThemeSheet} dark`}`}>
+          <SheetContent className={`bg-[${colorpallete.primary}] border-black/10`}>
             <SheetHeader>
               <SheetTitle className="text-center">
                 <SheetClose asChild>

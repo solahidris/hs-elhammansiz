@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { FaInstagram, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
-
+import { colorpallete } from "./ColorPallete";
 
 const Footer = () => {
 
@@ -16,13 +16,13 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full flex justify-between items-center p-6 lg:p-10 bg-gradient-to-b from-sky-700 to-sky-900 text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)]">
+    <div className={`w-full flex justify-between items-center p-6 lg:p-10 bg-gradient-to-b from-[${colorpallete.third}] to-[${colorpallete.primary}] text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)]`}>
       {/* <Button asChild variant="ghost" className="ml-[-10px]"><Link href="/">Dentaleaf 2024</Link></Button> */}
       <div className="flex">
         <Button asChild
           onClick={() => scrollToSection("hero")}
           variant="ghost"
-          className="self-center ml-[-10px] cursor-pointer ease-in-out transition active:scale-95 lg:block hidden hover:bg-sky-800 hover:text-white"
+          className={`self-center ml-[-10px] cursor-pointer ease-in-out transition active:scale-95 lg:block hidden hover:bg-white/10 hover:text-white`}
         >
           <p className="sacramento-navbar-left lg:text-[40px] mb-[-3px] lg:mb-0">
             Elham Mansiz
@@ -49,9 +49,9 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-row gap-2 lg:gap-4 mr-[-16px]">
-        <Button asChild variant="ghost" className="cursor-pointer ease-in-out transition active:scale-95 hover:bg-sky-800 hover:text-white"><Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%Mansiz!"><FaWhatsapp className="w-6 h-6 lg:w-8 lg:h-8" /></Link></Button>
-        <Button asChild variant="ghost" className="cursor-pointer ease-in-out transition active:scale-95 hover:bg-sky-800 hover:text-white"><Link href="tel:+60167138848"><FaPhoneAlt className="w-4 h-4 lg:w-6 lg:h-6" /></Link></Button>
-        <Button asChild variant="ghost" className="cursor-pointer ease-in-out transition active:scale-95 hover:bg-sky-800 hover:text-white"><Link href="https://www.instagram.com/elhammansiz/"><FaInstagram className="w-6 h-6 lg:w-8 lg:h-8" /></Link></Button>
+        <Button asChild variant="ghost" className={`cursor-pointer ease-in-out transition active:scale-95 hover:bg-white/10 hover:text-white`}><Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%Mansiz!"><FaWhatsapp className="w-6 h-6 lg:w-8 lg:h-8" /></Link></Button>
+        <Button asChild variant="ghost" className={`cursor-pointer ease-in-out transition active:scale-95 hover:bg-white/10 hover:text-white`}><Link href="tel:+60167138848"><FaPhoneAlt className="w-4 h-4 lg:w-6 lg:h-6" /></Link></Button>
+        <Button asChild variant="ghost" className={`cursor-pointer ease-in-out transition active:scale-95 hover:bg-white/10 hover:text-white`}><Link href="https://www.instagram.com/elhammansiz/"><FaInstagram className="w-6 h-6 lg:w-8 lg:h-8" /></Link></Button>
       </div>
 
     </div>
