@@ -16,7 +16,8 @@ const Footer = () => {
   };
 
   return (
-    <div className={`w-full flex justify-between items-center p-6 lg:p-10 bg-gradient-to-b from-[${colorpallete.third}] to-[${colorpallete.primary}] text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)]`}>
+    // <div className={`w-full flex justify-between items-center p-6 lg:p-10 bg-gradient-to-b from-[${colorpallete.third}] to-[${colorpallete.primary}] text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)]`}>
+    <div className={`w-full flex justify-between items-center p-6 lg:p-10 bg-black text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)]`}>
       {/* <Button asChild variant="ghost" className="ml-[-10px]"><Link href="/">Dentaleaf 2024</Link></Button> */}
       <div className="flex">
         <Button asChild

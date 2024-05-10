@@ -24,7 +24,8 @@ const HeaderNavbar = () => {
   return (
     <div
       id="hero"
-      className={`dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-gradient-to-t from-[${colorpallete.third}] to-[${colorpallete.primary}] drop-shadow-md max-h-[76px] z-[40]`}
+      // className={`dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-gradient-to-t from-[${colorpallete.third}] to-[${colorpallete.primary}] drop-shadow-md max-h-[76px] z-[40]`}
+      className={`dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-black drop-shadow-md max-h-[76px] z-[40]`}
     >
       {/* Left Side */}
       <Button
