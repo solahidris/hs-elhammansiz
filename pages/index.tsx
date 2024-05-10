@@ -2,6 +2,7 @@ import { CardStackTestimonials } from "@/components/CardStackTestimonials";
 import Footer from "@/components/Footer";
 import HeaderNavbar from "@/components/HeaderNavbar";
 import { HeroHighlightHomepage } from "@/components/HeroHighlightHomepage";
+import { LayoutGridHomepage } from "@/components/LayoutGridHomepage";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,8 +10,10 @@ const Home = () => {
   return (
     <main className="flex flex-col min-h-screen">
       <HeaderNavbar />
-
       <HeroHighlightHomepage />
+      <LayoutGridHomepage />
+
+      
       <div className="flex flex-col py-40">
         {/* Some Hero Stuff */}
         <div className="flex justify-between p-20 bg-neutral-100">
