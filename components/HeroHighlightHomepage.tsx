@@ -18,10 +18,10 @@ export function HeroHighlightHomepage() {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-2xl px-4 md:text-6xl lg:text-6xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+        className="text-2xl px-4 md:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-[50px] lg:leading-[90px] text-center mx-auto "
       >
         Buying a home is easy with <br/>
-        <Highlight className="text-white">
+        <Highlight className="text-white text-4xl lg:text-7xl">
           Elham Mansiz
         </Highlight>
       </motion.h1>

@@ -26,16 +26,16 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full py-10 px-10 lg:px-20 grid grid-cols-1 md:grid-cols-3 max-w-[100vw] mx-auto gap-4 relative">
+    <div className="w-full h-[50%] lg:h-full py-10 px-10 lg:px-20 grid grid-cols-3 md:grid-cols-3 max-w-[100vw] mx-auto gap-4 relative">
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+        <div key={i} className={cn(card.className, "")} style={{ gridColumn: calculateGridColumn(i) }}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-[90vw] md:w-1/2 m-auto z-10 flex justify-center items-center flex-wrap flex-col"
+                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-[90vw] lg:w-[75vw] m-auto z-10 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
                 ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
@@ -50,13 +50,18 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute min-h-[400vh] mt-[-480px] w-full left-0 top-0 bg-black/75 opacity-0 z-10",
+          "absolute min-h-[400vh] mt-[-480px] w-full left-0 top-0 bg-black/30 opacity-0 z-10",
           selected?.id ? "pointer-events-auto" : "pointer-events-none"
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
       />
     </div>
   );
+};
+
+const calculateGridColumn = (index: number) => {
+  if (index === 0 || index === 3) return 'span 2'; // First and fourth cards take 2 grid columns
+  return 'span 1'; // Second and third cards take 1 grid column
 };
 
 const BlurImage = ({ card }: { card: Card }) => {
@@ -68,7 +73,7 @@ const BlurImage = ({ card }: { card: Card }) => {
       width="500"
       onLoad={() => setLoaded(true)}
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
+        "object-cover object-bottom absolute inset-0 h-full w-full transition duration-200",
         loaded ? "blur-none" : "blur-md"
       )}
       alt="thumbnail"
@@ -78,7 +83,7 @@ const BlurImage = ({ card }: { card: Card }) => {
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
+    <div className="bg-transparent h-full w-[90vw] lg:w-[75vw] flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
       <motion.div
         initial={{
           opacity: 0,

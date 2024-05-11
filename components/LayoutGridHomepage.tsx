@@ -13,9 +13,9 @@ export function LayoutGridHomepage() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Hidup Bandar Moden</p>
+      <p className="font-bold text-3xl lg:text-5xl text-white">Hidup Bandar Moden</p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal text-xs lg:text-lg my-4 max-w-lg text-neutral-200">
         Rasai tenaga bersemangat kehidupan bandar dengan ruang hidup bandar moden ini.
         Terletak dengan mudah berhampiran semua kemudahan, ia menawarkan gabungan sempurna
         kecanggihan dan keselesaan.
@@ -27,9 +27,9 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Elegan Klasik</p>
+      <p className="font-bold text-3xl lg:text-5xl text-white">Elegan Klasik</p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal text-xs lg:text-lg my-4 max-w-lg text-neutral-200">
         Masuki dunia kecantikan abadi dengan rumah elegan klasik ini.
         Dengan senibina yang disempurnakan dan hiasan mewah, ia adalah tempat di mana
         setiap detik diisi dengan keanggunan dan pesona.
@@ -40,9 +40,9 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Tempat Perlindungan Selesa</p>
+      <p className="font-bold text-3xl lg:text-5xl text-white">Tempat Perlindungan Selesa</p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal text-xs lg:text-lg my-4 max-w-lg text-neutral-200">
         Lepaskan diri ke desa dan rehat di tempat perlindungan kotej selesa ini.
         Dikelilingi dengan keindahan alam semula jadi, ia adalah tempat persemadian
         kedamaian dan ketenangan di mana anda boleh bersambung semula dengan diri sendiri
@@ -54,9 +54,9 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Syurga Pantai</p>
+      <p className="font-bold text-3xl lg:text-5xl text-white">Syurga Pantai</p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal text-xs lg:text-lg my-4 max-w-lg text-neutral-200">
         Terimalah gaya hidup pantai dengan syurga pantai ini.
         Bangun dengan bunyi ombak dan nikmati keindahan pemandangan laut tanpa batas.
         Ia adalah tempat di mana setiap hari berasa seperti percutian.
