@@ -30,7 +30,7 @@ const Footer = () => {
           {/* <p className="sacramento-navbar-left lg:text-[40px] mb-[-3px] lg:mb-0">
             Elham Mansiz
           </p> */}
-          <Image src="/logo_elhammansiz.png" alt="headerlogo" width={1000} height={1000} className="w-[100px] h-[29px] lg:w-[150px] h-[45px]" />
+          <Image src="/logo_elhammansiz.png" alt="headerlogo" width={1000} height={1000} className="w-[100px] h-[30px] lg:w-[150px] h-[45px] object-contain" />
         </Button>
         {/* <Link
           className="flex"
