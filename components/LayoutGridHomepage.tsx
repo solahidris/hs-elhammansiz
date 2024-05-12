@@ -5,7 +5,7 @@ import { LayoutGrid } from "./ui/Layout-grid";
 export function LayoutGridHomepage() {
   return (
     <div className="lg:h-screen h-[50vh] w-full mt-[-20px] lg:mt-[200px]">
-      <span id="highlights" className="absolute left-0 text-[20px] lg:text-5xl z-10 font-bold mt-[-12px] lg:mt-[-0px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-r-lg z-50">Highlights</span>
+      <span id="highlights" className="absolute left-0 text-[20px] lg:text-5xl z-10 font-bold mt-[-12px] lg:mt-[-40px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-r-lg lg:rounded-r-xl z-0">Highlights</span>
       <LayoutGrid cards={cards} />
     </div>
   );

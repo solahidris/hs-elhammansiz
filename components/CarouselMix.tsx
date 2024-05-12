@@ -16,10 +16,10 @@ export function CarouselMix() {
   )
 
   return (
-    <div className="w-full flex justify-center lg:justify-start lg:ml-20 mx-auto items-center px-[90px] mt-[60px] lg:mt-[120px]">
+    <div className="w-full flex justify-center lg:justify-start lg:ml-0 mx-auto items-center px-[90px] mt-[60px] lg:mt-[120px]">
     <Carousel
       plugins={[plugin.current]}
-      className="w-full max-w-xs lg:max-w-lg lg:mr-20"
+      className="w-full max-w-xs lg:max-w-xl lg:mr-20"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >

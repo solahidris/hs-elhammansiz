@@ -31,7 +31,7 @@ export function HeroHighlightHomepage() {
       </motion.h1>
     </HeroHighlight>
 
-    <div className="absolute top-[100px] lg:top-[20px] left-[-150px] lg:left-[-400px] z-10">
+    <div className="absolute top-[100px] lg:top-[20px] left-[-150px] lg:left-[-400px] z-0">
       <Lottie
         animationData={animation_house_homepage2}
         loop={false}

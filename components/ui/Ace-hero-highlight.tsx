@@ -15,28 +15,16 @@ export const HeroHighlight = ({
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
-  function handleMouseMove({
-    currentTarget,
-    clientX,
-    clientY,
-  }: React.MouseEvent<HTMLDivElement>) {
-    if (!currentTarget) return;
-    let { left, top } = currentTarget.getBoundingClientRect();
-
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
   return (
     <div
       className={cn(
         "relative h-[16rem] lg:h-[25rem] mt-[76px] lg:mt-[80px] flex items-center bg-white dark:bg-black justify-center w-[70%] lg:w-[60%] ml-[30%] lg:ml-[40%] group",
         containerClassName
       )}
-      onMouseMove={handleMouseMove}
     >
-      <div className="absolute inset-0 bg-bg-grid-black/[0.2] dot-thick-neutral-300x  pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none" />
       <motion.div
-        className="pointer-events-none bg-grid-black/[0.2] bg-dot-thick-indigo-500x   absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(
@@ -55,7 +43,7 @@ export const HeroHighlight = ({
         }}
       />
 
-      <div className={cn("relative z-20", className)}>{children}</div>
+      <div className={cn("relative z-10", className)}>{children}</div>
     </div>
   );
 };

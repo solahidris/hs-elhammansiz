@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 
 export function CardStackTestimonials() {
   return (
-    <div className="h-full flex items-center justify-center w-full mt-16 lg:mt-[-40px] lg:absolute lg:justify-end lg:right-40">
+    <div className="h-full flex items-center justify-center w-full mt-16 lg:mt-[-10px] lg:absolute lg:justify-end lg:right-20">
       <CardStack items={CARDS} />
     </div>
   );

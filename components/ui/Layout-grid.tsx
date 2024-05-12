@@ -26,7 +26,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full py-10 px-10 lg:px-20 grid grid-cols-3 md:grid-cols-3 max-w-[100vw] mx-auto gap-4 relative">
+    <div className="w-full h-full py-10 lg:mt-10 px-10 lg:px-20 grid grid-cols-3 md:grid-cols-3 max-w-[100vw] mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")} style={{ gridColumn: calculateGridColumn(i) }}>
           <motion.div
@@ -50,7 +50,9 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute min-h-[400vh] mt-[-480px] w-full left-0 top-0 bg-black/75 opacity-0 z-10",
+          // "absolute min-h-[400vh] mt-[-480px] w-full left-0 top-0 bg-black/75 opacity-0 z-10",
+          // "absolute min-h-screen mt-[-300px] w-full left-0 top-0 bg-black/75 opacity-0 z-10",
+          "absolute h-[238vh] lg:h-[416vh] mt-[-300px] lg:mt-[-640px] w-full left-0 top-0 bg-black/50 opacity-0 z-10",
           selected?.id ? "pointer-events-auto" : "pointer-events-none"
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}

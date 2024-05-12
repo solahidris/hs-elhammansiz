@@ -12,6 +12,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { scrollToSection } from "@/functions/scrollToSection";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const HeaderNavbar = () => {
 
@@ -23,7 +25,7 @@ const HeaderNavbar = () => {
   return (
     <div
       id="hero"
-      className={`dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-gradient-to-t from-black/75 to-black drop-shadow-md max-h-[76px] z-[100]`}
+      className={`dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-gradient-to-t from-zinc-800 to-black drop-shadow-md max-h-[76px] z-[100]`}
       // className={`dark fixed top-0 w-full flex justify-between p-6 lg:p-10 bg-black drop-shadow-md max-h-[76px] z-[40]`}
     >
       {/* Left Side */}
@@ -104,7 +106,7 @@ const HeaderNavbar = () => {
           <SheetTrigger className="text-3xl self-center mt-[-7px] text-white">
             ☰
           </SheetTrigger>
-          <SheetContent className={`bg-gradient-to-r from-black to-black/85 border-black`}>
+          <SheetContent className={`bg-gradient-to-r from-black to-zinc-800 border-black`}>
             <SheetHeader>
               <SheetTitle className="text-center">
                 <SheetClose asChild>
@@ -155,13 +157,25 @@ const HeaderNavbar = () => {
                   <Button
                     asChild
                     variant="outline"
-                    onClick={() => scrollToSection("about")}
+                    onClick={() => scrollToSection("projects")}
                     className={`py-7 shadow ease-in-out transition active:scale-95 ${isDarkTheme && darkThemeSheetButtonMobile}`}
                   >
-                    <p>About</p>
+                    <p>Projects</p>
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className={`absolute bottom-6 w-[calc(100%-48px)]  py-7 shadow ease-in-out transition active:scale-95 bg-green-600 border-0 text-white`}
+                  >
+                    <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!" className="flex gap-1">
+                      <FaWhatsapp className="w-6 h-6 lg:w-8 lg:h-8" />
+                      <span>Whatsapp</span>
+                    </Link>
+                  </Button>
+                </SheetClose>
+                {/* <SheetClose asChild>
                   <Button
                     asChild
                     variant="outline"
@@ -190,7 +204,7 @@ const HeaderNavbar = () => {
                   >
                     <p>Our Priority</p>
                   </Button>
-                </SheetClose>
+                </SheetClose> */}
               </SheetDescription>
             </SheetHeader>
           </SheetContent>
