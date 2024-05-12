@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 
 export function CardStackTestimonials() {
   return (
-    <div className="h-full flex items-center justify-center w-full">
+    <div className="h-full flex items-center justify-center w-full mt-16 lg:mt-[-40px] lg:absolute lg:justify-end lg:right-40">
       <CardStack items={CARDS} />
     </div>
   );
@@ -33,39 +33,34 @@ export const Highlight = ({
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "Siti Nurhafiza",
+    designation: "Musician",
     content: (
       <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
+        Smooth and efficient process from <Highlight>start to finish.</Highlight> Exceptional service
+        and guidance. Highly recommend!
       </p>
     ),
   },
   {
     id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
+    name: "Mahadhir Mohamad",
+    designation: "Politician",
     content: (
       <p>
-        I dont like this Twitter thing,{" "}
-        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
-        would like to call it <Highlight>X.com</Highlight> so that it can easily
-        be confused with adult sites.
+        Selling was a breeze with Elham Mansiz. Great communication and
+        quick sale at a <Highlight>great price.</Highlight>
       </p>
     ),
   },
   {
     id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
+    name: "Cik Bee",
+    designation: "Comedian",
     content: (
       <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
+        Elham Mansiz <Highlight>expertise and professionalism</Highlight> helped me identify
+        great investment opportunities. Grateful for their partnership.
       </p>
     ),
   },

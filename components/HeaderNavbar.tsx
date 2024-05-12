@@ -51,10 +51,10 @@ const HeaderNavbar = () => {
         <Button
           asChild
           variant="outline"
-          onClick={() => scrollToSection("location")}
+          onClick={() => scrollToSection("highlights")}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
-          <p>Location</p>
+          <p>Highlights</p>
         </Button>
         <Button
           asChild
@@ -114,8 +114,8 @@ const HeaderNavbar = () => {
                     className="self-center ml-[-10px]"
                     onClick={() => scrollToSection("hero")}
                   >
-                    <div className="sacramento-navbar-left lg:text-[40px] mb-[-3px] lg:mb-0">
-                      <Image src="/logo_elhammansiz.png" alt="headerlogo" width={100} height={100} className="invertt" />
+                    <div className="sacramento-navbar-left lg:text-[40px] mb-[-3px] lg:mb-0 ">
+                      {/* <Image src="/logo_elhammansiz.png" alt="headerlogo" width={100} height={100} className="" /> */}
                     </div>
                   </Button>
                 </SheetClose>
@@ -135,10 +135,10 @@ const HeaderNavbar = () => {
                   <Button
                     asChild
                     variant="outline"
-                    onClick={() => scrollToSection("location")}
+                    onClick={() => scrollToSection("highlights")}
                     className={`py-7 shadow ease-in-out transition active:scale-95 ${isDarkTheme && darkThemeSheetButtonMobile}`}
                   >
-                    <p>Location</p>
+                    <p>Highlights</p>
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>

@@ -7,6 +7,7 @@ import { CarouselMix } from "@/components/CarouselMix";
 
 import Image from "next/image";
 import Link from "next/link";
+import { MultiTabs } from "@/components/MultiTabs";
 
 
 const Home = () => {
@@ -16,20 +17,15 @@ const Home = () => {
       <HeaderNavbar />
       <HeroHighlightHomepage />
       <LayoutGridHomepage />
-      <CarouselMix />
 
-      {/* add slides to the page */}
-      https://codesandbox.io/p/sandbox/embla-carousel-opacity-react-s3gkff?file=%2Fsrc%2Fjs%2FEmblaCarousel.tsx%3A131%2C2
-      https://www.embla-carousel.com/examples/predefined/
-
-      {/* Testimonials */}
-      {/* <div>
-        <p>Testimonials</p>
-        <p>card stack</p>
+      <div id="reviews" className="flex flex-col lg:flex-row">
+        <span className="absolute right-0 text-[20px] lg:text-5xl z-10 font-bold mt-[-22px] lg:mt-[60px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-l-lg z-50">Reviews</span>
         <CardStackTestimonials />
-      </div> */}
+        <CarouselMix />
+      </div>
 
-      
+      <MultiTabs />
+
       {/* <div className="flex flex-col py-40">
 
         <div className="flex justify-between p-20 bg-neutral-100">
