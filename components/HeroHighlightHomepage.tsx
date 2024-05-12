@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { HeroHighlight , Highlight } from "@/components/ui/Ace-hero-highlight";
-import animation_house_homepage2 from "../public/Animation_house_homepage2.json";
-import LottieAnimation from "./LottieAnimation";
+import animation_house_homepage2 from "../public/animation_house_homepage2.json";
+
 import Lottie from "lottie-react";
 
 export function HeroHighlightHomepage() {
