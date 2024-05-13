@@ -13,14 +13,15 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { scrollToSection } from "@/functions/scrollToSection";
 import { FaWhatsapp } from "react-icons/fa";
-
+import { useRouter } from "next/router";
 
 const HeaderNavbar = () => {
 
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  // const darkThemeSheet = "border-black/10"
   const darkThemeSheetButtonMobile = "bg-white/5 hover:bg-white/20 border border-0 text-white"
   const darkThemeSheetButtonDesktop = "dark:border dark:border-0 dark:bg-white/5 dark:hover:bg-white/10 dark:text-white/90"
+  const router = useRouter();
+  const isHome = router.pathname === "/";
 
   return (
     <div
@@ -45,7 +46,13 @@ const HeaderNavbar = () => {
         <Button
           asChild
           variant="outline"
-          onClick={() => scrollToSection("hero")}
+          onClick={() => {
+            if (isHome) {
+              scrollToSection("hero"); 
+            } else {
+              router.push("/");
+            }
+          }}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
           <p>Home</p>
@@ -53,7 +60,14 @@ const HeaderNavbar = () => {
         <Button
           asChild
           variant="outline"
-          onClick={() => scrollToSection("highlights")}
+          onClick={() => {
+            if (isHome) {
+              scrollToSection("highlights"); 
+            } else {
+              router.push("/");
+              setTimeout(() => scrollToSection("highlights"), 500); 
+            }
+          }}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
           <p>Highlights</p>
@@ -61,7 +75,14 @@ const HeaderNavbar = () => {
         <Button
           asChild
           variant="outline"
-          onClick={() => scrollToSection("reviews")}
+          onClick={() => {
+            if (isHome) {
+              scrollToSection("reviews"); 
+            } else {
+              router.push("/");
+              setTimeout(() => scrollToSection("reviews"), 500); 
+            }
+          }}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
           <p>Reviews</p>
@@ -69,35 +90,50 @@ const HeaderNavbar = () => {
         <Button
           asChild
           variant="outline"
-          onClick={() => scrollToSection("about")}
+          onClick={() => {
+            if (isHome) {
+              scrollToSection("projects"); 
+            } else {
+              router.push("/");
+              setTimeout(() => scrollToSection("projects"), 500); 
+            }
+          }}
+          className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
+        >
+          <p>Projects</p>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          onClick={() => {if (isHome) {router.push("/about")}}}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
           <p>About</p>
         </Button>
-        <Button
+        {/* <Button
           asChild
           variant="outline"
           onClick={() => scrollToSection("services")}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
           <p>Services</p>
-        </Button>
-        <Button
+        </Button> */}
+        {/* <Button
           asChild
           variant="outline"
           onClick={() => scrollToSection("teammembers")}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
           <p>Team Members</p>
-        </Button>
-        <Button
+        </Button> */}
+        {/* <Button
           asChild
           variant="outline"
           onClick={() => scrollToSection("ourpriority")}
           className={`cursor-pointer ease-in-out transition active:scale-95 ${isDarkTheme && `${darkThemeSheetButtonDesktop}`}`}
         >
           <p>Our Priority</p>
-        </Button>
+        </Button> */}
       </div>
 
       {/* Right Side - Mobile */}
@@ -127,7 +163,13 @@ const HeaderNavbar = () => {
                   <Button
                     asChild
                     variant="outline"
-                    onClick={() => scrollToSection("hero")}
+                    onClick={() => {
+                      if (isHome) {
+                        scrollToSection("hero"); 
+                      } else {
+                        router.push("/");
+                      }
+                    }}
                     className={`py-7 shadow ease-in-out transition active:scale-95 ${isDarkTheme && darkThemeSheetButtonMobile}`}
                   >
                     <p>Home</p>
@@ -137,7 +179,14 @@ const HeaderNavbar = () => {
                   <Button
                     asChild
                     variant="outline"
-                    onClick={() => scrollToSection("highlights")}
+                    onClick={() => {
+                      if (isHome) {
+                        scrollToSection("highlights"); 
+                      } else {
+                        router.push("/");
+                        setTimeout(() => scrollToSection("highlights"), 500); 
+                      }
+                    }}
                     className={`py-7 shadow ease-in-out transition active:scale-95 ${isDarkTheme && darkThemeSheetButtonMobile}`}
                   >
                     <p>Highlights</p>
@@ -147,7 +196,14 @@ const HeaderNavbar = () => {
                   <Button
                     asChild
                     variant="outline"
-                    onClick={() => scrollToSection("reviews")}
+                    onClick={() => {
+                      if (isHome) {
+                        scrollToSection("reviews"); 
+                      } else {
+                        router.push("/");
+                        setTimeout(() => scrollToSection("reviews"), 500); 
+                      }
+                    }}
                     className={`py-7 shadow ease-in-out transition active:scale-95 ${isDarkTheme && darkThemeSheetButtonMobile}`}
                   >
                     <p>Reviews</p>
@@ -157,10 +213,27 @@ const HeaderNavbar = () => {
                   <Button
                     asChild
                     variant="outline"
-                    onClick={() => scrollToSection("projects")}
+                    onClick={() => {
+                      if (isHome) {
+                        scrollToSection("projects"); 
+                      } else {
+                        router.push("/");
+                        setTimeout(() => scrollToSection("projects"), 500); 
+                      }
+                    }}
                     className={`py-7 shadow ease-in-out transition active:scale-95 ${isDarkTheme && darkThemeSheetButtonMobile}`}
                   >
                     <p>Projects</p>
+                  </Button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button
+                    asChild
+                    variant="outline"
+                    onClick={() => {if (isHome) {router.push("/about")}}}
+                    className={`py-7 shadow ease-in-out transition active:scale-95 ${isDarkTheme && darkThemeSheetButtonMobile}`}
+                  >
+                    <p>About</p>
                   </Button>
                 </SheetClose>
                 <SheetClose asChild>
