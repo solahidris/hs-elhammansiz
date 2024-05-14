@@ -7,9 +7,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {/* <Head><title>AppName</title></Head> */}
-      <Head>
+      {/* <Head>
         <meta name="viewport" content="viewport-fit=cover" />
-      </Head>
+      </Head> */}
       {/* <Analytics /> */}
       <Component {...pageProps} />
     </>
