@@ -54,9 +54,7 @@ const AboutPage = () => {
 
 
       <div id="reviews" className="flex flex-col lg:flex-row">
-        <span className="absolute right-0 text-[20px] lg:text-5xl z-10 font-bold mt-[8px] lg:mt-[44px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-l-lg lg:rounded-l-xl z-0">Reviews</span>
-        {/* <CardStackTestimonials /> */}
-        {/* <VerticalTimeline /> */}
+        <span className="absolute right-0 text-[20px] lg:text-5xl z-10 font-bold mt-[8px] lg:mt-[0px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-l-lg lg:rounded-l-xl z-0">Our Journey</span>
         <Timeline />
       </div>
 
@@ -64,11 +62,11 @@ const AboutPage = () => {
       {/* https://www.npmjs.com/package/react-vertical-timeline-component */}
       {/* https://www.npmjs.com/package/react-vertical-timeline-component */}
 
-        {/* 
-      <div id="projects" className="pt-3 lg:pt-20">
+        
+      <div id="projects" className="pt-3 lg:pt-28">
         <span id="highlights" className="absolute left-0 text-[20px] lg:text-5xl z-10 font-bold mt-[15px] lg:mt-[-36px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-r-lg lg:rounded-r-xl z-0">Projects</span>
         <MultiTabs />
-      </div> */}
+      </div>
 
         {/* <LayoutGridHomepage /> */}
 
