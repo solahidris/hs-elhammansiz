@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { FaInstagram, FaWhatsapp, FaPhoneAlt, FaTiktok, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaPhoneAlt, FaTiktok, FaFacebook, FaMapMarkerAlt, FaInbox } from "react-icons/fa";
 import Image from "next/image";
+
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -44,18 +45,18 @@ const Footer = () => {
 
       <div className="flex lg:w-[20vw] ">
         <div className="flex flex-col max-h-[128px] lg:h-full">
-          <span className="font-bold pb-1 lg:pb-2">Address</span>
-          <span className="text-xs">
+          <a href="https://maps.app.goo.gl/G1Bmxp7kEgV3wS4z7" className="font-bold pb-1 lg:pb-2 flex gap-1 items-center"><FaMapMarkerAlt className="w-2 h-2 lg:w-4 lg:h-4" />Address</a>
+          <a href="https://maps.app.goo.gl/G1Bmxp7kEgV3wS4z7" className="text-xs">
             No 2-2, Jalan BPP 5/3, Pusat Bandar Putra Permai, 43300 Seri
             Kembangan, Selangor , Seri Kembangan, Malaysia
-          </span>
+            </a>
         </div>
       </div>
 
-      <div className="flex lg:w-[20vw] w-full my-4 lg:my-0">
+      <div className="flex lg:w-[20vw] w-full my-4 lg:my-0 lg:min-h-[80px]">
         <div className="flex flex-col">
-          <span className="font-bold pb-1 lg:pb-2">Email</span>
-          <span className="text-xs">elhammansiz8848@gmail.com</span>
+          <a href="mailto:elhammansiz8848@gmail.com" className="font-bold pb-1 lg:pb-2 flex gap-1.5 items-center"><FaInbox className="w-2 h-2 lg:w-4 lg:h-4" />Email</a>
+          <a href="mailto:elhammansiz8848@gmail.com" className="text-xs">elhammansiz8848@gmail.com</a>
         </div>
       </div>
 
