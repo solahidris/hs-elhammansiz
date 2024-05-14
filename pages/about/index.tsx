@@ -52,10 +52,6 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* https://react-chrono.prabhumurthy.com/introduction/getting-started.html */}
-      {/* https://react-chrono.prabhumurthy.com/introduction/getting-started.html */}
-      {/* https://react-chrono.prabhumurthy.com/introduction/getting-started.html */}
-
 
       <div id="reviews" className="flex flex-col lg:flex-row">
         <span className="absolute right-0 text-[20px] lg:text-5xl z-10 font-bold mt-[8px] lg:mt-[44px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-l-lg lg:rounded-l-xl z-0">Reviews</span>
@@ -63,6 +59,11 @@ const AboutPage = () => {
         {/* <VerticalTimeline /> */}
         <Timeline />
       </div>
+
+      {/* https://www.npmjs.com/package/react-vertical-timeline-component */}
+      {/* https://www.npmjs.com/package/react-vertical-timeline-component */}
+      {/* https://www.npmjs.com/package/react-vertical-timeline-component */}
+
         {/* 
       <div id="projects" className="pt-3 lg:pt-20">
         <span id="highlights" className="absolute left-0 text-[20px] lg:text-5xl z-10 font-bold mt-[15px] lg:mt-[-36px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-r-lg lg:rounded-r-xl z-0">Projects</span>
