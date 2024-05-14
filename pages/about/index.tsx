@@ -37,14 +37,17 @@ const AboutPage = () => {
             <br/>
             <br/>
             Pemasaran hartanah yang diuruskan oleh Elham Mansiz merangkumi
-            "Jualan dan dokumentasi" bagi pihak bank dan juga LPPSA (Lembaga
+            &quot;Jualan dan dokumentasi&quot; bagi pihak bank dan juga LPPSA (Lembaga
             Pembiayaan Perumahan Sektor Awam). Kepakaran kami adalah
             menguruskan
-            "
-            client" tentera.</p>
+            &quot;client&quot; tentera.</p>
             <Image src={`/carousel_image_1.png`} alt={`carousel_image_1.png`} width={1000} height={1000} className="bg-cover h-full w-full lg:w-[75%] rounded-lg aspect-square"/>
         </div>
       </div>
+
+      {/* https://react-chrono.prabhumurthy.com/introduction/getting-started.html */}
+      {/* https://react-chrono.prabhumurthy.com/introduction/getting-started.html */}
+      {/* https://react-chrono.prabhumurthy.com/introduction/getting-started.html */}
 
 
         {/* <div id="reviews" className="flex flex-col lg:flex-row">
