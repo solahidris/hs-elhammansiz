@@ -16,7 +16,7 @@ export function CarouselMix() {
   )
 
   return (
-    <div className="w-full flex justify-center lg:justify-start lg:ml-0 mx-auto items-center px-[90px] mt-[60px] lg:mt-[180px]">
+    <div className="w-full flex justify-center lg:justify-start lg:ml-[8vw] mx-auto items-center px-[90px] mt-[60px] lg:mt-[180px]">
     <Carousel
       plugins={[plugin.current]}
       className="w-full max-w-xs lg:max-w-xl lg:mr-20"
