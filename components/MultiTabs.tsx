@@ -11,7 +11,7 @@ export function MultiTabs() {
       value: "product",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-6 lg:p-12 flex flex-col gap-4 lg:gap-8 text-xl md:text-4xl font-bold text-white bg-gradient-to-tr from-black to-zinc-700">
-          <p>Sold Out Projects in Perak</p>
+          <div className="mb-2"><span className="bg-red-600 text-white px-2 py-1 lg:px-6 lg:py-2 rounded-md lg:rounded-lg">Sold Out in Perak</span></div>
           <MultiTabsContent title="Perak" />
         </div>
       ),
@@ -21,8 +21,8 @@ export function MultiTabs() {
       value: "services",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-6 lg:p-12 flex flex-col gap-4 lg:gap-8 text-xl md:text-4xl font-bold text-white bg-gradient-to-tr from-black to-zinc-700">
-          <p>Inside Tab2</p>
-          <MultiTabsContent title="Perak123" />
+          <div className="mb-2"><span className="bg-red-600 text-white px-2 py-1 lg:px-6 lg:py-2 rounded-md lg:rounded-lg">Sold Out in Pahang</span></div>
+          <MultiTabsContent title="Pahang" />
         </div>
       ),
     },
@@ -31,8 +31,8 @@ export function MultiTabs() {
       value: "playground",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-6 lg:p-12 flex flex-col gap-4 lg:gap-8 text-xl md:text-4xl font-bold text-white bg-gradient-to-tr from-black to-zinc-700">
-          <p>Inside Tab3</p>
-          <MultiTabsContent title="Perak456" />
+          <div className="mb-2"><span className="bg-red-600 text-white px-2 py-1 lg:px-6 lg:py-2 rounded-md lg:rounded-lg">Sold Out in Johor</span></div>
+          <MultiTabsContent title="Johor" />
         </div>
       ),
     },
@@ -41,8 +41,8 @@ export function MultiTabs() {
       value: "content",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-6 lg:p-12 flex flex-col gap-4 lg:gap-8 text-xl md:text-4xl font-bold text-white bg-gradient-to-tr from-black to-zinc-700">
-          <p>Inside Tab4</p>
-          <MultiTabsContent title="Perak" />
+          <div className="mb-2"><span className="bg-red-600 text-white px-2 py-1 lg:px-6 lg:py-2 rounded-md lg:rounded-lg">Sold Out in Kelantan</span></div>
+          <MultiTabsContent title="Kelantan" />
         </div>
       ),
     },
@@ -51,8 +51,8 @@ export function MultiTabs() {
       value: "random",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-6 lg:p-12 flex flex-col gap-4 lg:gap-8 text-xl md:text-4xl font-bold text-white bg-gradient-to-tr from-black to-zinc-700">
-          <p>Inside Tab5</p>
-          <MultiTabsContent title="Perak" />
+          <div className="mb-2"><span className="bg-red-600 text-white px-2 py-1 lg:px-6 lg:py-2 rounded-md lg:rounded-lg">Sold Out in Terengganu</span></div>
+          <MultiTabsContent title="Terengganu" />
         </div>
       ),
     },
@@ -61,16 +61,16 @@ export function MultiTabs() {
       value: "random2",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-6 lg:p-12 flex flex-col gap-4 lg:gap-8 text-xl md:text-4xl font-bold text-white bg-gradient-to-tr from-black to-zinc-700">
-          <p>Inside Tab6</p>
-          <MultiTabsContent title="Perak" />
+          <div className="mb-2"><span className="bg-red-600 text-white px-2 py-1 lg:px-6 lg:py-2 rounded-md lg:rounded-lg">Sold Out in Negeri Sembilan</span></div>
+          <MultiTabsContent title="Negeri Sembilan" />
         </div>
       ),
     },
   ];
 
   return (
-    <div className="h-[30rem] md:h-[40rem] [perspective:1000px] relative flex flex-col max-w-[100vw] mx-auto w-full px-10 lg:px-20 items-start justify-start my-20">
-      {/* md:h-full md:min-h-  */}
+    <div className=" [perspective:1000px] relative flex flex-col max-w-[100vw] mx-auto w-full px-5 lg:px-20 items-start justify-start my-20">
+      {/* md:h-[40rem]  */}
       <TabsAceternity tabs={tabs} />
     </div>
   );

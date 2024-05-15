@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { ScrollArea } from "./scroll-area";
 
 type Tab = {
   title: string;
@@ -101,6 +102,7 @@ export const FadeInDiv = ({
   };
   return (
     <div className="relative w-full h-full">
+      
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
@@ -114,9 +116,11 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}
+          className={cn("w-full min-h-full absolute top-0 left-0 ", className)}
         >
-          {tab.content}
+          <ScrollArea className="h-[700px] w-full rounded-xl">
+            {tab.content}
+          </ScrollArea>
         </motion.div>
       ))}
     </div>
