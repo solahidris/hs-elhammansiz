@@ -52,7 +52,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
         className={cn(
           // "absolute min-h-[400vh] mt-[-480px] w-full left-0 top-0 bg-black/75 opacity-0 z-10",
           // "absolute min-h-screen mt-[-300px] w-full left-0 top-0 bg-black/75 opacity-0 z-10",
-          "absolute h-[330vh] lg:h-[480vh] mt-[-300px] lg:mt-[-640px] w-full left-0 top-0 bg-black/50 opacity-0 z-10",
+          "absolute h-[230vh] lg:h-[380vh] mt-[-300px] lg:mt-[-640px] w-full left-0 top-0 bg-black/50 opacity-0 z-10",
           selected?.id ? "pointer-events-auto" : "pointer-events-none"
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
