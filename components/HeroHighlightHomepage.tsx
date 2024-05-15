@@ -26,10 +26,10 @@ export function HeroHighlightHomepage() {
             duration: 0.5,
             ease: [0.4, 0.0, 0.2, 1],
           }}
-          className="px-4 text-xl md:text-6xl font-bold text-neutral-900 max-w-4xl lg:max-w-full leading-[40px] lg:leading-[100px] text-center mx-auto bg-red-300x mt-[-40px] lg:mt-10"
+          className="px-4 text-[17px] md:text-6xl font-bold text-neutral-900 max-w-4xl lg:max-w-full leading-[40px] lg:leading-[100px] text-center mx-auto bg-red-300x mt-[-40px] lg:mt-10"
         >
           Buying a home is easy with <br />
-          <Highlight className="text-white text-[36px] lg:text-7xl">
+          <Highlight className="text-white text-[30px] lg:text-7xl">
             Elham Mansiz
           </Highlight>
         </motion.h1>

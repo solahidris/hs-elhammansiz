@@ -8,6 +8,7 @@ import { FaHouse as HouseIcon } from "react-icons/fa6";
 
 const Timeline = () => {
   return (
+    // <div className='w-full lg:mt-[120px] mt-[100px] px-8'>
     <div className='w-full lg:mt-[120px] mt-[100px] px-8'>
       <VerticalTimeline lineColor="#f1f1ef" >
         <VerticalTimelineElement
