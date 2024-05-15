@@ -29,6 +29,13 @@ const Home = () => {
         <MultiTabs />
       </div>
 
+      <div className="w-full flex flex-col items-center">
+        <span>JUMLAH TAHUNAN UNIT JUALAN </span>
+        <span>2019 - 120 units</span>
+        <span>2021 - 203 units</span>
+        <span>2022 - 240 units</span>
+      </div>
+
       <div className="py-20">.</div>
       {/* See Line 55 - Layout-grid.tsx */}
 

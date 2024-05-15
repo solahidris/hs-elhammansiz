@@ -128,7 +128,7 @@ const AboutPage = () => {
               className="bg-cover rounded-lg aspect-square object-cover w-[30vw]"
             /> */}
             {/* <div className="w-[50%] lg:pr-10"> */}
-            <div className="w-[30%] lg:w-[50%] lg:pl-10 lg:relative absolute left-4 mt-[-540px] lg:left-0 lg:mt-0">
+            <div className="w-[30%] lg:w-[50%] lg:ml-[-50px] lg:mr-10 lg:relative absolute left-4 mt-[-540px] lg:left-0 lg:mt-0">
               <Lottie animationData={animationAboutMission} loop={true} />
             </div>
             <div className="text-xl font-base w-full lg:w-[80%] leading-8 tracking-wide lg:tracking-wider text-justify">
