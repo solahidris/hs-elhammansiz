@@ -10,6 +10,10 @@ import { CarouselMix } from "@/components/CarouselMix";
 import Link from "next/link";
 import { MultiTabs } from "@/components/MultiTabs";
 import Timeline from "@/components/Timeline";
+import Lottie from "lottie-react";
+import animationAboutMission from "@/public/animation_about_mission.json";
+import animationAboutVision from "@/public/animation_about_vision.json";
+
 
 const AboutPage = () => {
   const [isEnglish, setIsEnglish] = useState(true);
@@ -27,7 +31,7 @@ const AboutPage = () => {
           About us
         </span>
         {/* <CarouselMix /> */}
-        <div className="w-full lg:w-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-start mx-auto items-center px-8 lg:px-[90px] mt-[60px] lg:mt-[120px]">
+        <div className="w-full lg:w-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-start mx-auto items-center px-8 lg:px-[180px] mt-[60px] lg:mt-[120px]">
           <p className="text-xl font-base w-full leading-8">
             <span className="text-5xl lg:text-7xl font-bold leading-[60px] lg:leading-[120px]">
               Elham Mansiz
@@ -80,9 +84,9 @@ const AboutPage = () => {
         >
           Vision & Mission
         </span>
-        <div className="w-full lg:w-full flex flex-col gap-10 lg:gap-20 justify-center lg:justify-start mx-auto items-center px-8 lg:px-[90px] mt-[60px] lg:mt-[90px]">
+        <div className="w-full lg:w-full flex flex-col gap-10 lg:gap-20 justify-center lg:justify-start mx-auto items-center px-8 lg:px-[180px] mt-[60px] lg:mt-[90px]">
           <div className="w-full flex items-center">
-          <p className="text-xl font-base w-full leading-8">
+          <p className="text-xl font-base w-[80%] leading-8 tracking-wider text-justify">
             <span className="text-5xl lg:text-7xl font-bold leading-[60px] lg:leading-[120px]">
               Vision
             </span>
@@ -104,26 +108,32 @@ const AboutPage = () => {
             <br />
             <br />
           </p>
-          <Image
+          {/* <Image
               src={`/about_hero.png`}
               alt={`carousel_image_1.png`}
               width={1000}
               height={1000}
               className="bg-cover rounded-lg aspect-square object-cover w-[30vw]"
-            />
+            /> */}
+            <div className="w-[50%] lg:pl-10">
+              <Lottie animationData={animationAboutVision} loop={true} />
+            </div>
           </div>
           <div className="w-full flex items-center">
-            <Image
+            {/* <Image
               src={`/about_hero.png`}
               alt={`carousel_image_1.png`}
               width={1000}
               height={1000}
               className="bg-cover rounded-lg aspect-square object-cover w-[30vw]"
-            />
-            <p className="text-xl font-base w-full leading-8">
-              <span className="text-5xl lg:text-7xl font-bold leading-[60px] lg:leading-[120px]">
+            /> */}
+            <div className="w-[50%] lg:pr-10">
+              <Lottie animationData={animationAboutMission} loop={true} />
+            </div>
+            <div className="text-xl font-base w-[80%] leading-8 tracking-wider text-justify">
+              <p className="text-5xl lg:text-7xl font-bold leading-[60px] lg:leading-[60px] text-end">
                 Mission
-              </span>
+              </p>
               <br />
               {isEnglish ? (
                 <span>
@@ -149,7 +159,7 @@ const AboutPage = () => {
                   cuma hanya kepada tentera malahan awam dan juga swasta.
                 </span>
               )}
-            </p>
+            </div>
           </div>
         </div>
       </div>
