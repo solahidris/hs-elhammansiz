@@ -1,16 +1,25 @@
 // components/Timeline.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaBriefcase as WorkIcon, FaGraduationCap as SchoolIcon, FaStar as StarIcon } from 'react-icons/fa';
 import { FaHouse as HouseIcon } from "react-icons/fa6";
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 
 const Timeline = () => {
+
+  const isMobile = useIsMobile();
+  const [animateTimeline, setAnimateTimeline] = useState(true);
+  useEffect(() => {
+    isMobile ? setAnimateTimeline(false) : setAnimateTimeline(true);
+  }, [isMobile]);
+
   return (
     // <div className='w-full lg:mt-[120px] mt-[100px] px-8'>
     <div className='w-full lg:mt-[120px] mt-[100px] px-8'>
-      <VerticalTimeline lineColor="#f1f1ef" >
+      {/* <VerticalTimeline lineColor="#f1f1ef" animate={false} > */}
+      <VerticalTimeline lineColor="#f1f1ef" animate={animateTimeline} >
         <VerticalTimelineElement
           // className="vertical-timeline-element--work"
           contentStyle={{ background: '#F5F5F5', color: 'black' }}

@@ -31,8 +31,9 @@ const AboutPage = () => {
         <span className="absolute right-0 text-[20px] lg:text-5xl z-10 font-bold mt-[8px] lg:mt-[0px] bg-gradient-to-b from-black to-black/70 text-white px-6 py-1 lg:px-10 lg:py-4 rounded-l-lg lg:rounded-l-xl z-0">
           Our Journey
         </span>
-        <Timeline />
+        {/* <Timeline /> */}
       </div>
+        <Timeline />
 
       <div id="projects" className="pt-3 lg:pt-28 mt-12 lg:mt-0">
         <span
