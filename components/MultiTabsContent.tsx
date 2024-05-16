@@ -52,8 +52,8 @@ const MultiTabsContent = ({ title }: MultiTabsContentProps) => {
     return (
         <div className="flex flex-col gap-16 lg:gap-5">
             {soldoutUnits[title]?.map((item, index) => (
-                <div key={index} className="flex flex-col-reverse gap-2 lg:grid lg:grid-cols-2">
-                    <div className="flex flex-col items-center text-center justify-center lg:leading-[60px]">
+                <div key={index} className="flex flex-col-reverse gap-2 lg:flex lg:flex-row">
+                    <div className="flex flex-col items-center text-center justify-center lg:leading-[60px] w-full">
                         <span dangerouslySetInnerHTML={{ __html: item.text }}></span>
                     </div>
                     <Image
@@ -61,7 +61,7 @@ const MultiTabsContent = ({ title }: MultiTabsContentProps) => {
                         alt="sold out unit image"
                         width={1000}
                         height={1000}
-                        className="object-cover object-center h-full w-full relative inset-x-0 rounded-xl mx-auto"
+                        className="object-cover lg:object-contain object-center h-full w-full relative inset-x-0 rounded-xl mx-auto"
                     />
                 </div>
             ))}
