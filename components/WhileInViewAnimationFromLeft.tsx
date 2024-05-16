@@ -6,7 +6,7 @@ interface WhileInViewAnimationProps {
   children: ReactNode;
 }
 
-const WhileInViewAnimation = ({ children }: WhileInViewAnimationProps) => {
+const WhileInViewAnimationFromLeft = ({ children }: WhileInViewAnimationProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -25,4 +25,4 @@ const WhileInViewAnimation = ({ children }: WhileInViewAnimationProps) => {
   );
 };
 
-export default WhileInViewAnimation;
+export default WhileInViewAnimationFromLeft;
