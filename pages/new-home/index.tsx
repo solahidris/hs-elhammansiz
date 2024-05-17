@@ -30,10 +30,10 @@ const NewHome = () => {
                     <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-home"><Image src="/logo_elhammansiz.png" alt="headerlogo" width={110} height={110} className="invert"/></Link></Button>
                     <div className="hidden lg:block lg:flex lg:flex-row gap-20">
                         <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-home">Home</Link></Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-projects">Projects</Link></Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-agent">Agent</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-buy">Buy</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-join-us">Join Us</Link></Button>
                     </div>
-                    <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-600 text-white hover:bg-green-700 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
+                    <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-500 text-white hover:bg-green-600 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
                 </div>
 
 
@@ -52,21 +52,19 @@ const NewHome = () => {
 
                 </div>
 
-                <div className="grid grid-cols-2 w-full font-serif italic pt-48">
+                <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
                     <WhileInViewAnimationFromLeft>
-                        <Image src="/homepage_image_3.png" alt="image" width={400} height={400} className="w-full" />
+                        <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
                     </WhileInViewAnimationFromLeft>
-                    <div className="flex flex-col items-center justify-center text-xs lg:text-3xl">
+                    <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
                         <span>It&apos;s not just a house</span>
-                        <br/>
                         <span>It&apos;s a home</span>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 w-full font-serif italic pt-40">
-                    <div className="flex flex-col items-center justify-center text-xs lg:text-3xl">
+                <div className="grid grid-cols-2 w-full tracking-[2px] pt-40">
+                    <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
                         <span>a personal space</span>
-                        <br/>
                         <span>to heal and rest</span>
                     </div>
                     <WhileInViewAnimationFromRight>
@@ -79,9 +77,10 @@ const NewHome = () => {
                 </div>
 
                 <div className="flex justify-center items-center h-80">
-                    <span className="italic font-serif lg:text-3xl text-center">
-                        Buying a home shouldn&apos;t be stressful<br/><br/>It should be a lifetime experience
-                    </span>
+                    <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
+                        <span>Buying a home shouldn&apos;t be stressful</span>
+                        <span>It should be a lifetime experience</span>
+                    </div>
                 </div>
 
                 <WhileInViewAnimation>

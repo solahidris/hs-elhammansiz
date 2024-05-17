@@ -30,10 +30,10 @@ const NewHome = () => {
                     <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-home"><Image src="/logo_elhammansiz.png" alt="headerlogo" width={110} height={110} className="invert" /></Link></Button>
                     <div className="hidden lg:block lg:flex lg:flex-row gap-20">
                         <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-home">Home</Link></Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-projects">Projects</Link></Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-agent">Agent</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-buy">Buy</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-join-us">Join Us</Link></Button>
                     </div>
-                    <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-600 text-white hover:bg-green-700 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
+                    <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-500 text-white hover:bg-green-600 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
                 </div>
 
 
