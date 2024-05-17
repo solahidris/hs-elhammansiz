@@ -77,7 +77,7 @@ const NewHome = () => {
 
                 <WhileInViewAnimation>
                     <div>
-                        <Marquee direction="right">
+                        <Marquee direction="left">
                             {imageCarouselToDisplay.map((imageName, index) => (
                                 <div key={index} className="flex h-[200px]">
                                     <Image src={`/${imageName}`} alt="image" width={600} height={400} className="object-cover"/>
