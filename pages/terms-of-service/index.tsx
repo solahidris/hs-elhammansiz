@@ -9,7 +9,7 @@ import Marquee from 'react-fast-marquee';
 import MarqueeInfiniteSlider from "@/components/MarqueeInfiniteSlider";
 import { FaWhatsapp } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
-
+import { scrollToSection } from "@/functions/scrollToSection";
 
 const NewHome = () => {
 
@@ -23,15 +23,15 @@ const NewHome = () => {
         <div className="min-h-screen w-full flex flex-col">
             
             {/* HEADER COMPONENT */}
-            <div>
+            <div id="header">
                 {/* Header Desktop */}
                 <div className={`flex justify-between h-8 px-4 lg:px-10 py-10 items-center tracking-[2px] ${backgroundGradientStone} border border-b-1`}>
                     {/* <Button variant="ghost" className="hover:bg-black/5 text-base">Elham Mansiz</Button> */}
                     <Button variant="ghost" className="hover:bg-black/5 text-base"><Image src="/logo_elhammansiz.png" alt="headerlogo" width={110} height={110} className="invert"/></Button>
                     <div className="hidden lg:block lg:flex lg:flex-row gap-20">
-                        <Button variant="ghost" className="hover:bg-black/5 text-base">Home</Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base">Projects</Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base">Agent</Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-home">Home</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-projects">Projects</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-agent">Agent</Link></Button>
                     </div>
                     <Button variant="ghost" className="bg-green-600 text-white hover:bg-green-700 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button>
                 </div>
@@ -79,8 +79,8 @@ const NewHome = () => {
                 </div>
 
                 <div className="flex justify-center items-center h-80">
-                    <span className="italic font-serif lg:text-3xl">
-                        Buying a home shouldn&apos;t be stressful<br/><br/>It should be an enjoyable experience
+                    <span className="italic font-serif lg:text-3xl text-center">
+                        Buying a home shouldn&apos;t be stressful<br/><br/>It should be a lifetime experience
                     </span>
                 </div>
 
@@ -99,11 +99,11 @@ const NewHome = () => {
                 <div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-40">
                     <div className="grid grid-cols-4 text-2xl leading-[36px]">
                         <div className="flex flex-col">
-                            <span className="text-gray-500 pb-4">Elham Mansiz</span>
-                            <span className={`${footerLinkButtonCSS}`}>About Us</span>
-                            <span className={`${footerLinkButtonCSS}`}>Location</span>
-                            <span className={`${footerLinkButtonCSS}`}>Email</span>
-                            <span className={`${footerLinkButtonCSS}`}>Phone</span>
+                            <span onClick={()=> scrollToSection("header")} className="pb-4 cursor-pointer text-gray-500 hover:text-gray-600">Elham Mansiz</span>
+                            <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About Us</Link>
+                            <Link href="/new-location" className={`${footerLinkButtonCSS}`}>Location</Link>
+                            <Link href="mailto:elhammansiz8848@gmail.com" className={`${footerLinkButtonCSS}`}>Email</Link>
+                            <Link href="tel:+60167138848" className={`${footerLinkButtonCSS}`}>Phone</Link>
                         </div>
                         <div className="flex flex-col">
                             <span className="text-gray-500 pb-4">Projects</span>
@@ -116,14 +116,16 @@ const NewHome = () => {
                         </div>
                         <div className="flex flex-col">
                             <span className="text-gray-500 pb-4">Socials</span>
-                            <span className={`${footerLinkButtonCSS}`}>Facebook</span>
-                            <span className={`${footerLinkButtonCSS}`}>Instagram</span>
-                            <span className={`${footerLinkButtonCSS}`}>Tiktok</span>
-                            <span className={`${footerLinkButtonCSS}`}>Whatsapp</span>
+                            <Link href="https://www.facebook.com/elhammansizproperties" className={`${footerLinkButtonCSS}`}>Facebook</Link>
+                            <Link href="https://www.instagram.com/elhammansiz/" className={`${footerLinkButtonCSS}`}>Instagram</Link>
+                            <Link href="https://www.tiktok.com/@elhammansiz" className={`${footerLinkButtonCSS}`}>Tiktok</Link>
+                            <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!" className={`${footerLinkButtonCSS}`}>Whatsapp</Link>
                         </div>
                         <div className="flex flex-col gap-4 text-xs">
                             <span>Have questions?</span>
-                            <Button className="rounded-none py-6">Contact us</Button>
+                            <Button className="rounded-none py-6 bg-gray-400 hover:bg-gray-500">
+                                <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!">Contact us</Link>
+                            </Button>
                             <br/>
                             <span>Get updates</span>
                             <span className="text-gray-400">Drop us your email to learn what&apos;s next.</span>
@@ -131,10 +133,10 @@ const NewHome = () => {
                         </div>
                     </div>
                     <div className="flex justify-between bg-red-300x py-10 text-sm">
-                        <span className="text-gray-400 font-thin">© 2024 Elham Mansiz - Developed by HireSolah</span>
+                        <Link href="https://api.whatsapp.com/send?phone=60127710626&text=Hi%20Solah.%20Can%20you%20help%20me%20develop%20a%20website%3F%20I%20would%20like%20to%20know%20more.%20Thanks" className="text-gray-400 font-thin">© 2024 Elham Mansiz - Developed by HireSolah</Link>
                         <div className="flex gap-8 text-black">
-                            <span className={`${footerLinkButtonCSS}`}>Privacy policy</span>
-                            <span className={`${footerLinkButtonCSS}`}>Terms of service</span>
+                            <Link href="/privacy-policy" className={`${footerLinkButtonCSS}`}>Privacy policy</Link>
+                            <Link href="/terms-of-service" className={`${footerLinkButtonCSS}`}>Terms of service</Link>
                         </div>
                     </div>
                 </div>
