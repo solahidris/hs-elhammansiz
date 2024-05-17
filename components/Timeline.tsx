@@ -17,7 +17,7 @@ const Timeline = () => {
 
   return (
     // <div className='w-full lg:mt-[120px] mt-[100px] px-8'>
-    <div className='w-full lg:mt-[120px] mt-[100px] px-8'>
+    <div className='w-full lg:mt-[120px] mt-[100px] px-8 tracking-[1px]'>
       {/* <VerticalTimeline lineColor="#f1f1ef" animate={false} > */}
       <VerticalTimeline lineColor="#f1f1ef" animate={animateTimeline} >
         <VerticalTimelineElement

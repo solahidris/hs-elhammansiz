@@ -11,12 +11,16 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { scrollToSection } from "@/functions/scrollToSection";
 
+import AboutUsHero from "@/components/AboutUsHero";
+import Timeline from "@/components/Timeline";
+import VisionMission from "@/components/VisionMission";
+
 const NewHome = () => {
 
     const backgroundGradientStone = "bg-gradient-to-tr from-stone-50 via-stone-100 to-stone-50";
     const footerLinkButtonCSS = "hover:text-gray-500 cursor-pointer hover:translate-x-1 transition";
     const imageCarouselToDisplay = [
-        "homepage_image_3.png", "homepage_image_4.png", "homepage_image_1.png", "homepage_image_2.png",
+        "carousel_image_3.png", "carousel_image_4.png", "carousel_image_1.png", "carousel_image_2.png"
     ];    
 
     return(
@@ -33,7 +37,7 @@ const NewHome = () => {
                         <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-projects">Projects</Link></Button>
                         <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-agent">Agent</Link></Button>
                     </div>
-                    <Button variant="ghost" className="bg-green-600 text-white hover:bg-green-700 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button>
+                    <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-600 text-white hover:bg-green-700 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
                 </div>
 
 
@@ -49,43 +53,11 @@ const NewHome = () => {
             <div className="flex flex-col">
 
                 <div>
-
+                    <AboutUsHero />
                 </div>
 
-                <div className="grid grid-cols-2 w-full font-serif italic pt-48">
-                    <WhileInViewAnimationFromLeft>
-                        <Image src="/homepage_image_3.png" alt="image" width={400} height={400} className="w-full" />
-                    </WhileInViewAnimationFromLeft>
-                    <div className="flex flex-col items-center justify-center text-xs lg:text-3xl">
-                        <span>It&apos;s not just a house</span>
-                        <br/>
-                        <span>It&apos;s a home</span>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-2 w-full font-serif italic pt-40">
-                    <div className="flex flex-col items-center justify-center text-xs lg:text-3xl">
-                        <span>a personal space</span>
-                        <br/>
-                        <span>to heal and rest</span>
-                    </div>
-                    <WhileInViewAnimationFromRight>
-                        <Image src="/homepage_image_4.png" alt="image" width={400} height={400} className="w-full" />
-                    </WhileInViewAnimationFromRight>
-                </div>
-
-                <div className="pt-40">
-                    <MarqueeInfiniteSlider />
-                </div>
-
-                <div className="flex justify-center items-center h-80">
-                    <span className="italic font-serif lg:text-3xl text-center">
-                        Buying a home shouldn&apos;t be stressful<br/><br/>It should be a lifetime experience
-                    </span>
-                </div>
-
-                <WhileInViewAnimation>
-                    <div>
+                {/* <div className="pt-40">
+                    <WhileInViewAnimation>
                         <Marquee direction="left">
                             {imageCarouselToDisplay.map((imageName, index) => (
                                 <div key={index} className="flex h-[200px]">
@@ -93,11 +65,19 @@ const NewHome = () => {
                                 </div>
                             ))}
                         </Marquee>
-                    </div>
-                </WhileInViewAnimation>
+                    </WhileInViewAnimation>
+                </div> */}
 
-                <div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-40">
-                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
+                <div>
+                    <Timeline />
+                </div>
+                
+                <div>
+                    <VisionMission />
+                </div>
+
+
+<div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
                         <div className="flex flex-col">
                             <span onClick={()=> scrollToSection("header")} className="pb-4 cursor-pointer text-gray-500 hover:text-gray-600">Elham Mansiz</span>
                             <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About Us</Link>
@@ -123,9 +103,11 @@ const NewHome = () => {
                         </div>
                         <div className="flex flex-col gap-4 text-xs">
                             <span>Have questions?</span>
-                            <Button className="rounded-none py-6 bg-gray-400 hover:bg-gray-500">
-                                <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!">Contact us</Link>
-                            </Button>
+                            <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!">
+                                <Button className="rounded-none py-6 bg-gray-400 hover:bg-gray-500 w-full">
+                                    Contact us
+                                </Button>
+                            </Link>
                             <br/>
                             <span>Get updates</span>
                             <span className="text-gray-400">Drop us your email to learn what&apos;s next.</span>

@@ -33,7 +33,7 @@ const NewHome = () => {
                         <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-projects">Projects</Link></Button>
                         <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-agent">Agent</Link></Button>
                     </div>
-                    <Button variant="ghost" className="bg-green-600 text-white hover:bg-green-700 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button>
+                    <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-600 text-white hover:bg-green-700 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
                 </div>
 
 
@@ -96,8 +96,7 @@ const NewHome = () => {
                     </div>
                 </WhileInViewAnimation>
 
-                <div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-40">
-                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
+<div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
                         <div className="flex flex-col">
                             <span onClick={()=> scrollToSection("header")} className="pb-4 cursor-pointer text-gray-500 hover:text-gray-600">Elham Mansiz</span>
                             <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About Us</Link>
@@ -123,9 +122,11 @@ const NewHome = () => {
                         </div>
                         <div className="flex flex-col gap-4 text-xs">
                             <span>Have questions?</span>
-                            <Button className="rounded-none py-6 bg-gray-400 hover:bg-gray-500">
-                                <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!">Contact us</Link>
-                            </Button>
+                            <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!">
+                                <Button className="rounded-none py-6 bg-gray-400 hover:bg-gray-500 w-full">
+                                    Contact us
+                                </Button>
+                            </Link>
                             <br/>
                             <span>Get updates</span>
                             <span className="text-gray-400">Drop us your email to learn what&apos;s next.</span>

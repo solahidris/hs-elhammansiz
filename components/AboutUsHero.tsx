@@ -1,9 +1,13 @@
 import Image from "next/image";
+import WhileInViewAnimation from "./WhileInViewAnimation";
+import WhileInViewAnimationFromRight from "./WhileInViewAnimationFromRight";
+import WhileInViewAnimationFromLeft from "./WhileInViewAnimationFromLeft";
 
 const AboutUsHero = () => {
   return(
     <div className="w-full lg:w-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-start mx-auto items-center px-8 lg:px-[180px] mt-[60px] lg:mt-[120px]">
-          <p className="text-xl font-base w-full leading-8">
+          <WhileInViewAnimationFromLeft>
+          <p className="text-xl font-base w-full leading-8 tracking-[2px]">
             <span className="text-5xl lg:text-7xl font-bold leading-[60px] lg:leading-[120px]">
               Elham Mansiz
             </span>
@@ -25,7 +29,8 @@ const AboutUsHero = () => {
             (Lembaga Pembiayaan Perumahan Sektor Awam). Kepakaran kami adalah
             menguruskan &quot;client&quot; tentera.
           </p>
-          <div className="h-full w-full lg:w-[75%] flex flex-col mt-[-40px] lg:mt-[-100px]">
+          </WhileInViewAnimationFromLeft>
+          <div className="h-full w-full lg:w-[100%] flex flex-col mt-[-40px] lg:mt-[-100px]">
             <Image
               src={`/about_hero.png`}
               alt={`carousel_image_1.png`}
