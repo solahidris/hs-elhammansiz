@@ -5,25 +5,16 @@ import WhileInViewAnimationFromLeft from "@/components/WhileInViewAnimationFromL
 import WhileInViewAnimationFromRight from "@/components/WhileInViewAnimationFromRight";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import {InfiniteImageCarousel} from "@/components/InfiniteImageCarousel";
+import Marquee from 'react-fast-marquee';
+import MarqueeInfiniteSlider from "@/components/MarqueeInfiniteSlider";
+
 
 const NewHome = () => {
 
-    const imageCarouselToDisplay = [
-        "homepage_image_1.png", "homepage_image_2.png", "homepage_image_3.png", "homepage_image_4.png",
-    ];
-
-    const [scrollPosition, setScrollPosition] = useState(0);
-
-    useEffect(() => {
-        const scrollInterval = setInterval(() => {
-            setScrollPosition((prevPosition) => (prevPosition + 1) % (imageCarouselToDisplay.length * 400)); // Adjust 400 based on image width
-        }, 5); // Adjust the scroll speed as needed
-
-        return () => clearInterval(scrollInterval);
-    }, []);
-    
     const backgroundGradientStone = "bg-gradient-to-tr from-stone-50 via-stone-100 to-stone-50"
+    const imageCarouselToDisplay = [
+        "homepage_image_3.png", "homepage_image_4.png", "homepage_image_1.png", "homepage_image_2.png",
+    ];    
 
     return(
         <div className="min-h-screen w-full flex flex-col">
@@ -47,23 +38,24 @@ const NewHome = () => {
                 </div>
             </div>
 
+            {/* BODY COMPONENT */}
             <div className="flex flex-col">
 
                 <WhileInViewAnimationFromLeft>
                     <div className="grid grid-cols-2 w-full font-serif italic pt-40">
                         <Image src="/homepage_image_3.png" alt="image" width={400} height={400} className="w-full" />
-                        <div className="flex flex-col items-center justify-center text-xs lg:text-lg">
+                        <div className="flex flex-col items-center justify-center text-xs lg:text-base">
                             <span>It&apos;s not just a house</span>
                             <br/>
-                            <span>It&apos;s a <span className="font-semibold">home</span></span>
+                            <span>It&apos;s a home</span>
                         </div>
                     </div>
                 </WhileInViewAnimationFromLeft>
 
                 <WhileInViewAnimationFromRight>
                     <div className="grid grid-cols-2 w-full font-serif italic pt-40">
-                        <div className="flex flex-col items-center justify-center text-xs lg:text-lg">
-                            <span>a personal <span className="font-semibold">space</span></span>
+                        <div className="flex flex-col items-center justify-center text-xs lg:text-base">
+                            <span>a personal space</span>
                             <br/>
                             <span>to heal and rest</span>
                         </div>
@@ -71,15 +63,29 @@ const NewHome = () => {
                     </div>
                 </WhileInViewAnimationFromRight>
 
-                <div className="flex overflow-hidden" style={{ width: "100vw" }}>
-                    <div className="flex" style={{ transform: `translateX(-${scrollPosition}px)` }}>
-                        {imageCarouselToDisplay.map((imageName, index) => (
-                            <div key={index} className="flex-shrink-0">
-                                <Image src={`/${imageName}`} alt="image" width={400} height={400} className="w-full h-full" />
-                            </div>
-                        ))}
-                    </div>
+                <div className="pt-40">
+                    <MarqueeInfiniteSlider />
                 </div>
+
+                <WhileInViewAnimation>
+                    <div className="flex justify-center items-center h-80">
+                        <span className="italic font-serif">
+                            Buying a home shouldn&apos;t be stressful<br/><br/>It should be an enjoyable experience
+                        </span>
+                    </div>
+                </WhileInViewAnimation>
+
+                <WhileInViewAnimation>
+                    <div>
+                        <Marquee direction="right">
+                            {imageCarouselToDisplay.map((imageName, index) => (
+                                <div key={index} className="flex h-[200px]">
+                                    <Image src={`/${imageName}`} alt="image" width={600} height={400} className="object-cover"/>
+                                </div>
+                            ))}
+                        </Marquee>
+                    </div>
+                </WhileInViewAnimation>
                 
             </div>
 
