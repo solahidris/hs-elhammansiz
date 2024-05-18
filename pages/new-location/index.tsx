@@ -94,7 +94,7 @@ const NewHome = () => {
                     <div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
                         <div className="flex flex-col">
                             <span onClick={() => scrollToSection("header")} className="pb-4 cursor-pointer text-gray-500 hover:text-gray-600">Elham Mansiz</span>
-                            <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About Us</Link>
+                            <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About us</Link>
                             <Link href="/new-location" className={`${footerLinkButtonCSS}`}>Location</Link>
                             <Link href="mailto:elhammansiz8848@gmail.com" className={`${footerLinkButtonCSS}`}>Email</Link>
                             <Link href="tel:+60167138848" className={`${footerLinkButtonCSS}`}>Phone</Link>

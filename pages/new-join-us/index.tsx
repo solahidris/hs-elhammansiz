@@ -113,67 +113,71 @@ const NewHome = () => {
           <div className="flex flex-col gap-4 items-center justify-center text-xs lg:text-3xl">
             <span>Latest Kem Hartanah</span>
             <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
-                <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg">
+                <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg mt-4">
                 Click to Join
                 </Button>
             </Link>
           </div>
         </div>
 
-        <WhileInViewAnimation>
-            <div className="flex flex-col gap-10 w-full justify-center items-center pt-40">
-                <Image
-                    src="/join_us_hero.png"
-                    alt="joinUsHero"
-                    width={400}
-                    height={400}
-                    className="w-[50%] rounded-xl"
-                />
-            <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
-                <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg">
-                Click to Join
-                </Button>
-            </Link>
-            </div>
-        </WhileInViewAnimation>
+        <div className="grid grid-cols-2 gap-20 px-20">
+          <div className="flex flex-col w-[full] max-w-[50vw] mx-auto p-10 border rounded-xl mt-40 bg-yellow-100/40 tracking-[1px]">
+          <span className="font-semibold">KEM HARTANAH BATCH 03 SESI JUN 2024 🏠⛺️</span>
+          <br/>
+          <span>Jom belajar jadi :</span>
+          <span>
+              ✨PART TIME / FULL TIME KONSULTAN HARTANAH DENGAN EXTRA INCOME
+              RM10K SEBULAN!✨
+          </span>
+          <br/>
+          <span>Kelas mingguan online ✅</span>
+          <span>Kelas secara offline✅</span>
+          <span>Coaching 1 to 1 ✅</span>
+          <br/>
+          <span>YURAN HANYA RM30 seumur hidup</span>
+          <br/>
+          <span>Tarikh : 1 JUN 2024 (AHAD)</span>
+          <span>Masa : 8.00am -12.00pm</span>
+          <span>
+              Tempat : EM WAR ROOM SERI KEMBANGAN / ONLINE PLATFORM ZOOM
+          </span>
+          <br/>
+          <span>AFFIN BANK</span>
+          <span>106770002821</span>
+          <span>ELHAM MANSIZ</span>
+          <br/>
+          <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
+              <Button className="bg-blue-600 hover:bg-blue-700">
+              Daftar Sekarang
+              </Button>
+          </Link>
+          </div>
 
-        <WhileInViewAnimation>
-            <div className="flex flex-col w-[full] max-w-[50vw] mx-auto p-10 border rounded-xl mt-40 bg-yellow-100/60 tracking-[1px]">
-            <span className="font-semibold">KEM HARTANAH BATCH 03 SESI JUN 2024 🏠⛺️</span>
-            <br/>
-            <span>Jom belajar jadi :</span>
-            <span>
-                ✨PART TIME / FULL TIME KONSULTAN HARTANAH DENGAN EXTRA INCOME
-                RM10K SEBULAN!✨
-            </span>
-            <br/>
-            <span>Kelas mingguan online ✅</span>
-            <span>Kelas secara offline✅</span>
-            <span>Coaching 1 to 1 ✅</span>
-            <br/>
-            <span>YURAN HANYA RM30 seumur hidup</span>
-            <br/>
-            <span>Tarikh : 1 JUN 2024 (AHAD)</span>
-            <span>Masa : 8.00am -12.00pm</span>
-            <span>
-                Tempat : EM WAR ROOM SERI KEMBANGAN / ONLINE PLATFORM ZOOM
-            </span>
-            <br/>
-            <span>AFFIN BANK</span>
-            <span>106770002821</span>
-            <span>ELHAM MANSIZ</span>
-            <br/>
-            <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
-                <Button className="bg-blue-600 hover:bg-blue-700">
-                Daftar Sekarang
-                </Button>
-            </Link>
-            </div>
-        </WhileInViewAnimation>
+          <WhileInViewAnimationFromRight>
+              <div className="flex flex-col gap-10 w-full justify-center items-center pt-40">
+                  <Image
+                      src="/join_us_hero.png"
+                      alt="joinUsHero"
+                      width={400}
+                      height={400}
+                      className="w-[100%] rounded-xl"
+                  />
+              <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
+                  <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg">
+                  Click to Join
+                  </Button>
+              </Link>
+              </div>
+          </WhileInViewAnimationFromRight>
+        </div>
+
+        <div className="pt-40">
+            <MarqueeInfiniteSlider />
+        </div>
 
         <div>
             <div className="w-full flex flex-col gap-10 pt-40">
-                <span className="text-7xl tracking-[1px] font-bold pl-16">Past Campaigns</span>
+                <span className="text-7xl tracking-[1px] font-medium pl-16">Past Campaigns</span>
                 <div className="grid grid-cols-2 mx-auto">
                     <div className="w-full px-16">
                     <WhileInViewAnimationFromLeft>
@@ -187,10 +191,10 @@ const NewHome = () => {
                         {Array.from({ length: 12 }).map((_, index) => (
                         <CarouselItem key={index} className="my-auto">
                             <div className="p-1">
-                            <Card className="max-w-[560px] max-h-[500px] my-auto">
+                            <Card className="max-w-full max-h-[600px] lg:max-h-[900px] my-auto">
                                 <CardContent className="flex aspect-squarex  items-center justify-center p-0 rounded-lg">
                                 {/* <span className="text-4xl font-semibold">{index + 1}</span> */}
-                                <Image src={`/kem_hartanah_okt_2023_${index+1}.png`} alt={`kem_hartanah_okt_2023_3${index+1}.png`} width={1000} height={1000} className=" max-w-[560px] max-h-[500px] object-cover object-center h-full w-full rounded-lg"/>
+                                <Image src={`/kem_hartanah_okt_2023_${index+1}.png`} alt={`kem_hartanah_okt_2023_3${index+1}.png`} width={1000} height={1000} className=" max-w-full max-h-[600px] lg:max-h-[900px] object-cover object-center h-full w-full rounded-lg"/>
                                 </CardContent>
                             </Card>
                             </div>

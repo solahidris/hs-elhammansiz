@@ -48,28 +48,42 @@ const NewHome = () => {
             {/* BODY COMPONENT */}
             <div className="flex flex-col">
 
-                <div>
-
-                </div>
-
                 <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
                     <WhileInViewAnimationFromLeft>
                         <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
                     </WhileInViewAnimationFromLeft>
                     <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
-                        <span>It&apos;s not just a house</span>
-                        <span>It&apos;s a home</span>
+                        <span>The best in town for</span>
+                        <span>helping soldiers to buy</span>
+                        <span>their dream home</span>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 w-full tracking-[2px] pt-40">
-                    <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
-                        <span>a personal space</span>
-                        <span>to heal and rest</span>
-                    </div>
-                    <WhileInViewAnimationFromRight>
-                        <Image src="/homepage_image_4.png" alt="image" width={400} height={400} className="w-full" />
-                    </WhileInViewAnimationFromRight>
+                <div className="grid grid-cols-3 gap-10 px-10 w-full tracking-[2px] pt-48">
+                    <WhileInViewAnimation>
+                        <Link href="/new-buy"  >
+                            <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
+                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
+                                <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>Buy a home</span>
+                            </div>
+                        </Link>
+                    </WhileInViewAnimation>
+                    <WhileInViewAnimation>
+                        <Link href="/new-join-us" className="tranform hover:translate-x-10">
+                            <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
+                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
+                                <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>Join our team</span>
+                            </div>
+                        </Link>
+                    </WhileInViewAnimation>
+                    <WhileInViewAnimation>
+                        <Link href="/new-about-us" className="tranform hover:translate-x-10">
+                            <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
+                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
+                                <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>About us</span>
+                            </div>
+                        </Link>
+                    </WhileInViewAnimation>
                 </div>
 
                 <div className="pt-40">
@@ -79,7 +93,7 @@ const NewHome = () => {
                 <div className="flex justify-center items-center h-80">
                     <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
                         <span>Buying a home shouldn&apos;t be stressful</span>
-                        <span>It should be a lifetime experience</span>
+                        <span>It should be a memorable experience</span>
                     </div>
                 </div>
 
@@ -94,11 +108,13 @@ const NewHome = () => {
                         </Marquee>
                     </div>
                 </WhileInViewAnimation>
-
-<div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
+                
+                {/* FOOTER */}
+                <div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">                    
+                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
                         <div className="flex flex-col">
                             <span onClick={()=> scrollToSection("header")} className="pb-4 cursor-pointer text-gray-500 hover:text-gray-600">Elham Mansiz</span>
-                            <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About Us</Link>
+                            <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About us</Link>
                             <Link href="/new-location" className={`${footerLinkButtonCSS}`}>Location</Link>
                             <Link href="mailto:elhammansiz8848@gmail.com" className={`${footerLinkButtonCSS}`}>Email</Link>
                             <Link href="tel:+60167138848" className={`${footerLinkButtonCSS}`}>Phone</Link>
