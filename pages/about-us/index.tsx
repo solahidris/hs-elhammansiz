@@ -11,12 +11,16 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { scrollToSection } from "@/functions/scrollToSection";
 
+import AboutUsHero from "@/components/AboutUsHero";
+import Timeline from "@/components/Timeline";
+import VisionMission from "@/components/VisionMission";
+
 const NewHome = () => {
 
     const backgroundGradientStone = "bg-gradient-to-tr from-stone-50 via-stone-100 to-stone-50";
     const footerLinkButtonCSS = "hover:text-gray-500 cursor-pointer hover:translate-x-1 transition";
     const imageCarouselToDisplay = [
-        "homepage_image_3.png", "homepage_image_4.png", "homepage_image_1.png", "homepage_image_2.png",
+        "carousel_image_3.png", "carousel_image_4.png", "carousel_image_1.png", "carousel_image_2.png"
     ];    
 
     return(
@@ -27,11 +31,11 @@ const NewHome = () => {
                 {/* Header Desktop */}
                 <div className={`flex justify-between h-8 px-4 lg:px-10 py-10 items-center tracking-[2px] ${backgroundGradientStone} border border-b-1`}>
                     {/* <Button variant="ghost" className="hover:bg-black/5 text-base">Elham Mansiz</Button> */}
-                    <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-home"><Image src="/logo_elhammansiz.png" alt="headerlogo" width={110} height={110} className="invert"/></Link></Button>
+                    <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/"><Image src="/logo_elhammansiz.png" alt="headerlogo" width={110} height={110} className="invert"/></Link></Button>
                     <div className="hidden lg:block lg:flex lg:flex-row gap-20">
-                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-home">Home</Link></Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-buy">Buy</Link></Button>
-                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/new-join-us">Join Us</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/">Home</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/buy">Buy</Link></Button>
+                        <Button variant="ghost" className="hover:bg-black/5 text-base"><Link href="/join-us">Join Us</Link></Button>
                     </div>
                     <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-500 text-white hover:bg-green-600 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
                 </div>
@@ -48,57 +52,12 @@ const NewHome = () => {
             {/* BODY COMPONENT */}
             <div className="flex flex-col">
 
-                <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
-                    <WhileInViewAnimationFromLeft>
-                        <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
-                    </WhileInViewAnimationFromLeft>
-                    <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
-                        <span>The best in town for</span>
-                        <span>helping soldiers to buy</span>
-                        <span>their dream home</span>
-                    </div>
+                <div>
+                    <AboutUsHero />
                 </div>
 
-                <div className="grid grid-cols-3 gap-10 px-10 w-full tracking-[2px] pt-48">
+                {/* <div className="pt-40">
                     <WhileInViewAnimation>
-                        <Link href="/new-buy"  >
-                            <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
-                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
-                                <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>Buy a home</span>
-                            </div>
-                        </Link>
-                    </WhileInViewAnimation>
-                    <WhileInViewAnimation>
-                        <Link href="/new-join-us" className="tranform hover:translate-x-10">
-                            <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
-                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
-                                <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>Join our team</span>
-                            </div>
-                        </Link>
-                    </WhileInViewAnimation>
-                    <WhileInViewAnimation>
-                        <Link href="/new-about-us" className="tranform hover:translate-x-10">
-                            <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
-                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
-                                <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>About us</span>
-                            </div>
-                        </Link>
-                    </WhileInViewAnimation>
-                </div>
-
-                <div className="pt-40">
-                    <MarqueeInfiniteSlider />
-                </div>
-
-                <div className="flex justify-center items-center h-80">
-                    <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
-                        <span>Buying a home shouldn&apos;t be stressful</span>
-                        <span>It should be a memorable experience</span>
-                    </div>
-                </div>
-
-                <WhileInViewAnimation>
-                    <div>
                         <Marquee direction="left">
                             {imageCarouselToDisplay.map((imageName, index) => (
                                 <div key={index} className="flex h-[200px]">
@@ -106,16 +65,23 @@ const NewHome = () => {
                                 </div>
                             ))}
                         </Marquee>
-                    </div>
-                </WhileInViewAnimation>
+                    </WhileInViewAnimation>
+                </div> */}
+
+                <div>
+                    <Timeline />
+                </div>
                 
-                {/* FOOTER */}
-                <div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">                    
-                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
+                <div>
+                    <VisionMission />
+                </div>
+
+
+<div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">                    <div className="grid grid-cols-4 text-2xl leading-[36px]">
                         <div className="flex flex-col">
                             <span onClick={()=> scrollToSection("header")} className="pb-4 cursor-pointer text-gray-500 hover:text-gray-600">Elham Mansiz</span>
-                            <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>About us</Link>
-                            <Link href="/new-location" className={`${footerLinkButtonCSS}`}>Location</Link>
+                            <Link href="/about-us" className={`${footerLinkButtonCSS}`}>About us</Link>
+                            <Link href="/location" className={`${footerLinkButtonCSS}`}>Location</Link>
                             <Link href="mailto:elhammansiz8848@gmail.com" className={`${footerLinkButtonCSS}`}>Email</Link>
                             <Link href="tel:+60167138848" className={`${footerLinkButtonCSS}`}>Phone</Link>
                         </div>

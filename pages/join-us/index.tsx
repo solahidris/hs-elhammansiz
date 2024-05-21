@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import * as React from "react"
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import WhileInViewAnimation from "@/components/WhileInViewAnimation";
 import WhileInViewAnimationFromLeft from "@/components/WhileInViewAnimationFromLeft";
@@ -10,9 +11,16 @@ import MarqueeInfiniteSlider from "@/components/MarqueeInfiniteSlider";
 import { FaWhatsapp } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { scrollToSection } from "@/functions/scrollToSection";
-import { Card } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
+
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+import { Card, CardContent } from "@/components/ui/card"
+import Autoplay from "embla-carousel-autoplay";
 
 const NewHome = () => {
   const backgroundGradientStone =
@@ -26,6 +34,10 @@ const NewHome = () => {
     "homepage_image_2.png",
   ];
 
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+
   return (
     <div className="min-h-screen w-full flex flex-col">
       {/* HEADER COMPONENT */}
@@ -36,7 +48,7 @@ const NewHome = () => {
         >
           {/* <Button variant="ghost" className="hover:bg-black/5 text-base">Elham Mansiz</Button> */}
           <Button variant="ghost" className="hover:bg-black/5 text-base">
-            <Link href="/new-home">
+            <Link href="/">
               <Image
                 src="/logo_elhammansiz.png"
                 alt="headerlogo"
@@ -48,24 +60,16 @@ const NewHome = () => {
           </Button>
           <div className="hidden lg:block lg:flex lg:flex-row gap-20">
             <Button variant="ghost" className="hover:bg-black/5 text-base">
-              <Link href="/new-home">Home</Link>
+              <Link href="/">Home</Link>
             </Button>
             <Button variant="ghost" className="hover:bg-black/5 text-base">
-              <Link href="/new-buy">Buy</Link>
+              <Link href="/buy">Buy</Link>
             </Button>
             <Button variant="ghost" className="hover:bg-black/5 text-base">
-              <Link href="/new-join-us">Join Us</Link>
+              <Link href="/join-us">Join Us</Link>
             </Button>
           </div>
-          <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!">
-            <Button
-              variant="ghost"
-              className="bg-green-500 text-white hover:bg-green-600 hover:text-white text-base flex gap-1"
-            >
-              <FaWhatsapp />
-              Whatsapp
-            </Button>
-          </Link>
+          <Link href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-green-500 text-white hover:bg-green-600 hover:text-white text-base flex gap-1"><FaWhatsapp />Whatsapp</Button></Link>
         </div>
 
         {/* Header Mobile */}
@@ -95,61 +99,127 @@ const NewHome = () => {
 
       {/* BODY COMPONENT */}
       <div className="flex flex-col">
-        <div></div>
 
-        <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
+      <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
           <WhileInViewAnimationFromLeft>
             <Image
-              src="/homepage_image_2.png"
+              src="/homepage_image_3.png"
               alt="image"
               width={400}
               height={400}
               className="w-full"
             />
           </WhileInViewAnimationFromLeft>
-          <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
-            <span>Looking for your</span>
-            <span>dream property?</span>
-            <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6" className="mt-4">
-              <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg">
-                Let&apos;s chat
-              </Button>
+          <div className="flex flex-col gap-4 items-center justify-center text-xs lg:text-3xl">
+            <span>Latest Kem Hartanah</span>
+            <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
+                <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg mt-4">
+                Click to Join
+                </Button>
             </Link>
           </div>
         </div>
 
-        <div className="px-20 grid grid-cols-4 gap-10 pt-40">
-          {[...Array(20)].map((_, index) => (
-            <Card key={index} className="p-6 flex flex-col justify-between">
-              <Image
-                src={`/homepage_image_${(index % 4) + 1}.png`}
-                alt="image"
-                width={400}
-                height={400}
-                className="mb-4 rounded-md"
-              />
-              <div>
-                <Badge>Negeri</Badge>
-                <p>property.name</p>
-                <p>property.name</p>
-                <p>property.location</p>
-                <p>property.size</p>
-                <p>property.rooms</p>
-                <p>property.facilities</p>
-                <p>property.price</p>
-                <p>property?.rebate</p>
+        <div className="grid grid-cols-2 gap-20 px-20">
+          <div className="flex flex-col w-[full] max-w-[50vw] mx-auto p-10 border rounded-xl mt-40 bg-yellow-100/40 tracking-[1px]">
+          <span className="font-semibold">KEM HARTANAH BATCH 03 SESI JUN 2024 🏠⛺️</span>
+          <br/>
+          <span>Jom belajar jadi :</span>
+          <span>
+              ✨PART TIME / FULL TIME KONSULTAN HARTANAH DENGAN EXTRA INCOME
+              RM10K SEBULAN!✨
+          </span>
+          <br/>
+          <span>Kelas mingguan online ✅</span>
+          <span>Kelas secara offline✅</span>
+          <span>Coaching 1 to 1 ✅</span>
+          <br/>
+          <span>YURAN HANYA RM30 seumur hidup</span>
+          <br/>
+          <span>Tarikh : 1 JUN 2024 (AHAD)</span>
+          <span>Masa : 8.00am -12.00pm</span>
+          <span>
+              Tempat : EM WAR ROOM SERI KEMBANGAN / ONLINE PLATFORM ZOOM
+          </span>
+          <br/>
+          <span>AFFIN BANK</span>
+          <span>106770002821</span>
+          <span>ELHAM MANSIZ</span>
+          <br/>
+          <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
+              <Button className="bg-blue-600 hover:bg-blue-700">
+              Daftar Sekarang
+              </Button>
+          </Link>
+          </div>
+
+          <WhileInViewAnimationFromRight>
+              <div className="flex flex-col gap-10 w-full justify-center items-center pt-40">
+                  <Image
+                      src="/join_us_hero.png"
+                      alt="joinUsHero"
+                      width={400}
+                      height={400}
+                      className="w-[100%] rounded-xl"
+                  />
+              <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
+                  <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg">
+                  Click to Join
+                  </Button>
+              </Link>
               </div>
-              <Button className="mt-4">See Details</Button>
-            </Card>
-          ))}
+          </WhileInViewAnimationFromRight>
         </div>
 
         <div className="pt-40">
-          <MarqueeInfiniteSlider />
+            <MarqueeInfiniteSlider />
         </div>
 
-        {/* FOOTER */}
+        <div>
+            <div className="w-full flex flex-col gap-10 pt-40">
+                <span className="text-7xl tracking-[1px] font-medium pl-16">Past Campaigns</span>
+                <div className="grid grid-cols-2 mx-auto">
+                    <div className="w-full px-16">
+                    <WhileInViewAnimationFromLeft>
+                    <Carousel
+                    plugins={[plugin.current]}
+                    className=""
+                    onMouseEnter={plugin.current.stop}
+                    onMouseLeave={plugin.current.reset}
+                    >
+                    <CarouselContent>
+                        {Array.from({ length: 12 }).map((_, index) => (
+                        <CarouselItem key={index} className="my-auto">
+                            <div className="p-1">
+                            <Card className="max-w-full max-h-[600px] lg:max-h-[900px] my-auto">
+                                <CardContent className="flex aspect-squarex  items-center justify-center p-0 rounded-lg">
+                                {/* <span className="text-4xl font-semibold">{index + 1}</span> */}
+                                <Image src={`/kem_hartanah_okt_2023_${index+1}.png`} alt={`kem_hartanah_okt_2023_3${index+1}.png`} width={1000} height={1000} className=" max-w-full max-h-[600px] lg:max-h-[900px] object-cover object-center h-full w-full rounded-lg"/>
+                                </CardContent>
+                            </Card>
+                            </div>
+                        </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                    </Carousel>
+                    </WhileInViewAnimationFromLeft>
+                    </div>
+                    <div className="flex flex-col gap-4 font-thin items-center justify-center text-5xl">
+                        <p>Kem Hartanah</p>
+                        <p>7 Oktober 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+  
+
         <div className="flex flex-col gap-10 tracking-[2px] lg:px-12 pt-12 mt-40 bg-gray-50">
+          {" "}
           <div className="grid grid-cols-4 text-2xl leading-[36px]">
             <div className="flex flex-col">
               <span
@@ -158,10 +228,10 @@ const NewHome = () => {
               >
                 Elham Mansiz
               </span>
-              <Link href="/new-about-us" className={`${footerLinkButtonCSS}`}>
-                About us
+              <Link href="/about-us" className={`${footerLinkButtonCSS}`}>
+                About Us
               </Link>
-              <Link href="/new-location" className={`${footerLinkButtonCSS}`}>
+              <Link href="/location" className={`${footerLinkButtonCSS}`}>
                 Location
               </Link>
               <Link
