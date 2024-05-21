@@ -50,7 +50,7 @@ const NewHome = () => {
 
                 <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
                     <WhileInViewAnimationFromLeft>
-                        <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
+                        <Image src="/homepage_image_1.png" alt="image" width={800} height={800} className="w-full" />
                     </WhileInViewAnimationFromLeft>
                     <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
                         <span>The best in town for</span>
@@ -63,7 +63,7 @@ const NewHome = () => {
                     <WhileInViewAnimation>
                         <Link href="/buy"  >
                             <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
-                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
+                                <Image src="/homepage_buy_a_home.png" alt="image" width={800} height={800} className="w-full" />
                                 <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>Buy a home</span>
                             </div>
                         </Link>
@@ -71,7 +71,7 @@ const NewHome = () => {
                     <WhileInViewAnimation>
                         <Link href="/join-us" className="tranform hover:translate-x-10">
                             <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
-                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
+                                <Image src="/homepage_join_our_team.png" alt="image" width={800} height={800} className="w-full" />
                                 <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>Join our team</span>
                             </div>
                         </Link>
@@ -79,7 +79,7 @@ const NewHome = () => {
                     <WhileInViewAnimation>
                         <Link href="/about-us" className="tranform hover:translate-x-10">
                             <div className="relative transition hover:translate-y-[-8px] hover:opacity-[90%]">
-                                <Image src="/homepage_image_1.png" alt="image" width={400} height={400} className="w-full" />
+                                <Image src="/homepage_about_us.png" alt="image" width={800} height={800} className="w-full max-h-[330px] object-cover" />
                                 <span className="bg-black/50 p-5" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white'}}>About us</span>
                             </div>
                         </Link>

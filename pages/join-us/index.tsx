@@ -103,10 +103,10 @@ const NewHome = () => {
       <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
           <WhileInViewAnimationFromLeft>
             <Image
-              src="/homepage_image_3.png"
+              src="/homepage_join_our_team.png"
               alt="image"
-              width={400}
-              height={400}
+              width={800}
+              height={800}
               className="w-full"
             />
           </WhileInViewAnimationFromLeft>
