@@ -43,12 +43,12 @@ const PrivacyPolicyPage = () => {
 
             <h2 className="text-2xl py-4" >Introduction</h2>
             <p>
-              Welcome to Elham Mansiz Resources ("we," "our," "us"). We are
+              Welcome to Elham Mansiz Resources (&quot;we,&quot; &quot;our,&quot; &quot;us&quot;). We are
               committed to protecting and respecting your privacy. This Privacy
               Policy explains how we collect, use, disclose, and safeguard your
-              information when you visit our website{" "}
+              information when you visit our website
               <a href="https://www.elhammansiz.com">www.elhammansiz.com</a> (the
-              "Site"). Please read this Privacy Policy carefully. If you do not
+              &quot;Site&quot;). Please read this Privacy Policy carefully. If you do not
               agree with the terms of this Privacy Policy, please do not access
               the Site.
             </p>
@@ -77,8 +77,8 @@ const PrivacyPolicyPage = () => {
             <h3 className="text-xl py-4" >Usage Data</h3>
             <p>
               We may also collect information on how the Site is accessed and
-              used ("Usage Data"). This Usage Data may include information such
-              as your computer's Internet Protocol (IP) address, browser type,
+              used (&quot;Usage Data&quot;). This Usage Data may include information such
+              as your computer&apos;s Internet Protocol (IP) address, browser type,
               browser version, the pages of our Site that you visit, the time
               and date of your visit, the time spent on those pages, unique
               device identifiers, and other diagnostic data.
@@ -150,7 +150,7 @@ const PrivacyPolicyPage = () => {
             <p>
               Our Site may contain links to other websites that are not operated
               by us. If you click on a third-party link, you will be directed to
-              that third party's site. We strongly advise you to review the
+              that third party&apos;s site. We strongly advise you to review the
               Privacy Policy of every site you visit. We have no control over
               and assume no responsibility for the content, privacy policies, or
               practices of any third-party sites or services.
