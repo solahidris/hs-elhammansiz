@@ -30,15 +30,17 @@ const HeaderMenu = () => {
                 <div className="lg:hidden">
                     <Sheet>
                         <SheetTrigger><RxHamburgerMenu className="text-white h-6 w-6 mr-2" /></SheetTrigger>
-                        <SheetContent className="z-[100] bg-contain" style={{ backgroundImage: `url('/blue_background.png')` }}>
+                        <SheetContent className="z-[100] bg-cover border-0" style={{ backgroundImage: `url('/blue_background.png')` }}>
                             <SheetHeader>
                                 <SheetTitle className="text-white flex justify-center"><Image src="/logo_elhammansiz.png" alt="headerlogo" width={110} height={110} /></SheetTitle>
                                 <SheetDescription>
                                     <div className="flex flex-col justify-between text-white min-h-[calc(100vh-80px)]">
-                                        <div className="flex flex-col gap-20 pt-20">
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-3xl font-thin tracking-[2px]"><Link href="/">Home</Link></Button>
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-3xl font-thin tracking-[2px]"><Link href="/buy">Buy</Link></Button>
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-3xl font-thin tracking-[2px]"><Link href="/join-us">Join Us</Link></Button>
+                                        <div className="flex flex-col justify-end bg-red-300x gap-5 pb-10 min-h-[calc(100vh-160px)]">
+                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/">Home</Link></Button>
+                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/about">About</Link></Button>
+                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/location">Location</Link></Button>
+                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/buy">Buy</Link></Button>
+                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[105%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/join-us">Join Us</Link></Button>
                                         </div>
                                         <div className="pb-5"> 
                                         <Link className="w-full" href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-[#3ba72f] text-white hover:bg-green-600 hover:text-white text-base flex gap-2 w-full py-8 text-xl font-thin tracking-[2px]"><FaWhatsapp />Whatsapp</Button></Link>
