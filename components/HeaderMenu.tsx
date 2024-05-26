@@ -27,11 +27,11 @@ const HeaderMenu = () => {
                                 <SheetDescription>
                                     <div className="flex flex-col justify-between text-white min-h-[calc(100vh-80px)]">
                                         <div className="flex flex-col justify-end bg-red-300x gap-5 pb-10 min-h-[calc(100vh-160px)]">
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/">Home</Link></Button>
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/about-us">About</Link></Button>
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/location">Location</Link></Button>
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/buy">Buy</Link></Button>
-                                            <Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start"><Link href="/join-us">Join Us</Link></Button>
+                                            <Link href="/"><Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start w-full">Home</Button></Link>
+                                            <Link href="/about-us"><Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start w-full">About</Button></Link>
+                                            <Link href="/location"><Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start w-full">Location</Button></Link>
+                                            <Link href="/buy"><Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start w-full">Buy</Button></Link>
+                                            <Link href="/join-us"><Button variant="ghost" className="hover:bg-white/15 hover:text-white hover:scale-[97%] transition py-8 text-2xl font-thin tracking-[2px] justify-start w-full">Join Us</Button></Link>
                                         </div>
                                         <div className="pb-5"> 
                                         <Link className="w-full" href="https://api.whatsapp.com/send?phone=60167138848&text=Hi%20Elham%20Mansiz!"><Button variant="ghost" className="bg-[#3ba72f] text-white hover:bg-[#35962a] hover:text-white text-base flex gap-2 w-full py-8 text-xl font-thin tracking-[2px]"><FaWhatsapp />Whatsapp</Button></Link>
