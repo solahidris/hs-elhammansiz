@@ -32,34 +32,10 @@ const AboutUsPage = () => {
 
             {/* BODY COMPONENT */}
             <div className="flex flex-col">
-
-                <div>
-                    <AboutUsHero />
-                </div>
-
-                {/* <div className="pt-40">
-                    <WhileInViewAnimation>
-                        <Marquee direction="left">
-                            {imageCarouselToDisplay.map((imageName, index) => (
-                                <div key={index} className="flex h-[200px]">
-                                    <Image src={`/${imageName}`} alt="image" width={600} height={400} className="object-cover"/>
-                                </div>
-                            ))}
-                        </Marquee>
-                    </WhileInViewAnimation>
-                </div> */}
-
-                <div>
-                    <Timeline />
-                </div>
-                
-                <div>
-                    <VisionMission />
-                </div>
-
-
+                <AboutUsHero />
+                <Timeline />
+                <VisionMission />
                 <FooterMenu />
-                
             </div>
 
         </div>

@@ -5,11 +5,11 @@ import WhileInViewAnimationFromLeft from "./WhileInViewAnimationFromLeft";
 
 const AboutUsHero = () => {
   return(
-    <div className="w-full lg:w-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-start mx-auto items-center px-8 lg:px-20 mt-[60px] lg:mt-[120px]">
-          <div className="w-[60%]">
+    <div className="w-full lg:w-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-start mx-auto items-center px-6 lg:px-20 mt-[64px] lg:mt-[120px]">
+          <div className="w-full lg:w-[60%]">
           <WhileInViewAnimationFromLeft>
-          <p className="text-xl font-base w-full leading-8 tracking-[2px]">
-            <span className="text-5xl lg:text-7xl font-bold leading-[60px] lg:leading-[120px]">
+          <p className="text-base lg:text-base font-base w-full tracking-[1px]">
+            <span className="text-5xl lg:text-7xl font-bold leading-[120px] lg:leading-[120px]">
               Elham Mansiz
             </span>
             <br />
@@ -32,7 +32,7 @@ const AboutUsHero = () => {
           </p>
           </WhileInViewAnimationFromLeft>
           </div>
-          <div className="h-full w-[40%] flex flex-col mt-[-40px] lg:mt-[-100px]">
+          <div className="h-full w-[80%] lg:w-[40%] flex flex-col mt-[-40px] lg:mt-[-100px]">
             <Image
               src={`/about_hero.png`}
               alt={`carousel_image_1.png`}
