@@ -22,14 +22,14 @@ const PrivacyPolicyPage = () => {
 
       {/* BODY COMPONENT */}
       <div className="flex flex-col">
-        <div className="grid grid-cols-1 lg:grid-cols-2 w-full tracking-[2px] pt-10 lg:pt-48">
+        <div className="grid grid-cols-1 lg:grid-cols-2 w-full tracking-[2px] pt-20 lg:pt-48">
           <WhileInViewAnimationFromLeft>
             <Image
               src="/location_banner.png"
               alt="image"
               width={800}
               height={800}
-              className="w-full max-h-[670px] object-cover object-top"
+              className="w-full max-h-[260px] lg:max-h-[670px] object-cover object-top"
             />
           </WhileInViewAnimationFromLeft>
           <div className="flex flex-col items-center justify-center text-3xl lg:text-3xl">

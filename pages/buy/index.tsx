@@ -34,7 +34,7 @@ const NewHome = () => {
       <div className="flex flex-col">
         <div></div>
 
-        <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 w-full tracking-[2px] pt-20 lg:pt-48">
           <WhileInViewAnimationFromLeft>
             <Image
               src="/homepage_buy_a_home.png"
@@ -44,7 +44,7 @@ const NewHome = () => {
               className="w-full"
             />
           </WhileInViewAnimationFromLeft>
-          <div className="flex flex-col gap-2 items-center justify-center text-xs lg:text-3xl">
+          <div className="flex flex-col gap-2 items-center justify-center text-3xl lg:text-3xl py-20 lg:py-0">
             <span>Looking for your</span>
             <span>dream property?</span>
             <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6" className="mt-4">
@@ -55,9 +55,9 @@ const NewHome = () => {
           </div>
         </div>
 
-        <div className="px-20 grid grid-cols-4 gap-10 pt-40">
+        <div className=" px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-4 gap-3 lg:gap-10 lg:pt-40">
           {[...Array(20)].map((_, index) => (
-            <Card key={index} className="p-6 flex flex-col justify-between">
+            <Card key={index} className="p-3 flex flex-col justify-between">
               <Image
                 src={`/homepage_image_${(index % 4) + 1}.png`}
                 alt="image"
@@ -65,7 +65,7 @@ const NewHome = () => {
                 height={400}
                 className="mb-4 rounded-md"
               />
-              <div>
+              <div className="truncate">
                 <Badge>Negeri</Badge>
                 <p>property.name</p>
                 <p>property.name</p>

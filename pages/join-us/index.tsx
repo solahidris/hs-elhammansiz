@@ -45,7 +45,7 @@ const NewHome = () => {
       {/* BODY COMPONENT */}
       <div className="flex flex-col">
 
-        <div className="grid grid-cols-2 w-full tracking-[2px] pt-48">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 w-full tracking-[2px] pt-20 lg:pt-48">
           <WhileInViewAnimationFromLeft>
             <Image
               src="/homepage_join_our_team.png"
@@ -55,7 +55,7 @@ const NewHome = () => {
               className="w-full"
             />
           </WhileInViewAnimationFromLeft>
-          <div className="flex flex-col gap-4 items-center justify-center text-xs lg:text-3xl">
+          <div className="flex flex-col gap-4 items-center justify-center text-3xl lg:text-3xl py-20 lg:py-0">
             <span>Latest Kem Hartanah</span>
             <Link href="https://forms.gle/9Gk3BSGAUm9ZoaZL6">
               <Button className="px-10 py-6 bg-blue-600 hover:bg-blue-700 tracking-[1px] text-lg mt-4">
@@ -65,8 +65,8 @@ const NewHome = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-20 px-20">
-          <div className="flex flex-col w-[full] max-w-[50vw] mx-auto p-10 border rounded-xl mt-40 bg-yellow-100/40 tracking-[1px]">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-20 px-6 lg:px-20">
+          <div className="flex flex-col w-[full] lg:max-w-[50vw] mx-auto p-4 lg:p-10 border rounded-xl lg:mt-40 bg-yellow-100/40 tracking-[1px]">
             <span className="font-semibold">KEM HARTANAH BATCH 03 SESI JUN 2024 🏠⛺️</span>
             <br />
             <span>Jom belajar jadi :</span>
@@ -99,7 +99,7 @@ const NewHome = () => {
           </div>
 
           <WhileInViewAnimationFromRight>
-            <div className="flex flex-col gap-10 w-full justify-center items-center pt-40">
+            <div className="flex flex-col gap-10 w-full justify-center items-center lg:pt-40">
               <Image
                 src="/join_us_hero.png"
                 alt="joinUsHero"
@@ -122,8 +122,8 @@ const NewHome = () => {
 
         <div>
           <div className="w-full flex flex-col gap-10 pt-40">
-            <span className="text-7xl tracking-[1px] font-medium pl-16">Past Campaigns</span>
-            <div className="grid grid-cols-2 mx-auto">
+            <span className="text-3xl lg:text-7xl tracking-[1px] font-medium pl-6 lg:pl-16">Past Campaigns</span>
+            <div className="flex flex-col gap-4 lg:gap-0 lg:grid lg:grid-cols-2 mx-auto">
               <div className="w-full px-16">
                 <WhileInViewAnimationFromLeft>
                   <Carousel
@@ -151,7 +151,7 @@ const NewHome = () => {
                   </Carousel>
                 </WhileInViewAnimationFromLeft>
               </div>
-              <div className="flex flex-col gap-4 font-thin items-center justify-center text-5xl">
+              <div className="flex flex-col gap-4 font-thin items-center justify-center text-3xl lg:text-5xl">
                 <p>Kem Hartanah</p>
                 <p>7 Oktober 2023</p>
               </div>
