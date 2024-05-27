@@ -51,7 +51,7 @@ const NewHome = () => {
                         <Button variant="ghost" className="py-0 my-0 h-[120px] w-[120px] cursor-pointer ease-in-out transition active:scale-95 mr-2">
                           <Link href="https://maps.app.goo.gl/ZVTsPSP1NvbMZdXL7">
                             <Image
-                              src="/socials_google_Maps_icon.png"
+                              src="/socials_google_maps_icon.png"
                               width={100}
                               height={100}
                               alt="googlemapsicon"
